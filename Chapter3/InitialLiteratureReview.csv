@@ -1,0 +1,51 @@
+Year,Authors,Title,Source,Screening,Inclusion
+2011,"DM Salama, NM El-Gohary",Semantic modeling for automated compliance checking,Computing in Civil Engineering,y,n
+2012,"G Boella, L Di Caro, L Humphreys, L Robaldo, L Rossi","Nlp challenges for eunomos, a tool to build and manage legal knowledge",Language Resources and Evaluation (LREC),y,n
+2013,"J Dimyadi, R Amor",Automated building code compliance checking–where is it at,Proceedings of CIB WBC,y,n
+2013,"DA Salama, NM El-Gohary",Automated compliance checking of construction operation plans using a deontology for the construction domain,"Journal of Computing in Civil Engineering, ASCE",y,n
+2015,"J Zhang, NM El-Gohary",Automated information transformation for automated regulatory compliance checking in construction,"Journal of Computing in Civil Engineering, ASCE",y,y
+2015,"W Solihin, C Eastman",Classification of rules for automated BIM rule checking development,"Automation in Construction, Elsevier",y,n
+2014,"SA Mokhov, J Paquet, M Debbabi",The use of NLP techniques in static code analysis to detect weaknesses and vulnerabilities,Proceedings of the International Conference on Security of Information and Networks,n,
+2017,"B Lin, S Scalabrino, A Mocci, R Oliveto, et al.",Investigating the use of code analysis and NLP to promote a consistent usage of identifiers,IEEE International Conference on Source Code Analysis and Manipulation,n,
+2015,"M Yalcinkaya, V Singh",Patterns and trends in building information modeling (BIM) research: A latent semantic analysis,"Automation in Construction, Elsevier",y,n
+2015,"M Uhm, G Lee, Y Park, S Kim, J Jung, J Lee",Requirements for computational rule checking of requests for proposals (RFPs) for building designs in South Korea,"Advanced Engineering Informatics, Elsevier",y,n
+2017,"M Landhäußer, S Weigelt, WF Tichy",NLCI: a natural language command interpreter,"Automated Software Engineering, Springer",n,
+2015,"A Arellano, E Carney, MA Austin",Natural language processing of textual requirements,"The Tenth International Conference on Software Engineering Advances, IEEE",y,n
+2016,"M Robeer, G Lucassen",Automated extraction of conceptual models from user stories via NLP,"2016 IEEE 24th International Requirements Engineering Conference (RE), IEEE",n,
+2016,"J Zhang, NM El-Gohary",Semantic NLP-based information extraction from construction regulatory documents for automated compliance checking,"Journal of Computing in Civil Engineering, ASCE",y,y
+2016,"J Zhang, NM El-Gohary",Extending building information models semiautomatically using semantic natural language processing techniques,"Journal of Computing in Civil Engineering, ASCE",y,y
+2016,"S Li, H Cai, VR Kamat",Integrating natural language processing and spatial reasoning for utility compliance checking,"Journal of Construction Engineering and Management, ASCE",y,y
+2016,"AJP Tixier, MR Hallowell, B Rajagopalan",Automated content analysis for construction safety: A natural language processing system to extract precursors and outcomes from unstructured injury reports,"Automation in Construction, Elsevier",y,n
+2016,"M Dragoni, S Villata, W Rizzi",Combining NLP approaches for rule extraction from legal documents,"1st Workshop on MIning LEGal texts, HAL",y,n
+2017,"J Zhang, NM El-Gohary",Integrating semantic NLP and logic reasoning into a unified system for fully-automated code checking,"Automation in Construction, Elsevier",y,y
+2017,"SM Ilal, HM Günaydın",Computer representation of building codes for automated compliance checking,"Automation in Construction, Elsevier",y,n
+2017,MD Ernst,Natural language is a programming language: Applying natural language processing to software development,"2nd Summit on Advances in Programming Languages, Dagstuhl",n,
+2019,"Y Jallan, E Brogan, B Ashuri",Application of natural language processing and text mining to identify patterns in construction-defect litigation cases,"Journal of legal affairs and dispute resolution in engineering and construction, ASCE",n,
+2009,"E Gabrilovich, S Markovitch",Wikipedia-based semantic interpretation for natural language processing,Journal of artificial intelligence research,n,
+2017,"AS Ismail, KN Ali, NA Iahad",A review on BIM-based automated code compliance checking system,"2017 International Conference on Research and Innovation in Information Systems (ICRIIS), IEEE",y,n
+2006,"R Mihalcea, H Liu, H Lieberman",NLP (natural language processing) for NLP (natural language programming),Conference in Mexico City,n,
+2019,"A Gulli, A Kapoor, S Pal","Deep learning with TensorFlow 2 and Keras: regression, ConvNets, GANs, RNNs, NLP, and more with TensorFlow 2 and the Keras API","Book, Google.com",n,
+2019,"M Toneva, L Wehbe",Interpreting and improving natural-language processing (in machines) with natural language-processing (in the brain),Advances in Neural Information Processing Systems (NeurIPS),n,
+2012,"K Crowston, EE Allen, R Heckman",Using natural language processing technology for qualitative data analysis,"International Journal of Social Research Methodology, Taylor & Francis",n,
+2018,"M Gardner, J Grus, M Neumann, O Tafjord, et al.",Allennlp: A deep semantic natural language processing platform,arXiv preprint,n,
+2019,"H Hapke, C Howard, H Lane","Natural Language Processing in Action: Understanding, analyzing, and generating text with Python","Book, Google.com",n,
+2019,"D Rao, B McMahan",Natural language processing with PyTorch: build intelligent language applications using deep learning,"Book, Google.com",n,
+2016,"S Doan, CK Maehara, JD Chaparro, et al.",Building a natural language processing tool to identify patients with high clinical suspicion for Kawasaki disease from emergency department notes,"Academic Emergency Medicine, Wiley Online Library",n,
+2007,"A Baneyx, J Charlet, MC Jaulent",Building an ontology of pulmonary diseases with natural language processing tools using textual corpora,"International Journal of Medical Informatics, Elsevier",n,
+2009,"D Demner-Fushman, WW Chapman, et al.",What can natural language processing do for clinical decision support?,"Journal of Biomedical Informatics, Elsevier",n,
+2017,"P Zhou, N El-Gohary",Ontology-based automated information extraction from building energy conservation codes,"Automation in Construction, Elsevier",y,y
+2001,"JB Michael, VL Ong, NC Rowe",Natural-language processing support for developing policy-governed software systems,"Proceedings of the 39th International Conference, IEEE",n,
+2016,"N Aletras, D Tsarapatsanis, D Preoţiuc-Pietro, et al.",Predicting judicial decisions of the European Court of Human Rights: A natural language processing perspective,PeerJ Computer Science,n,
+2019,SM Mathews,"Explainable artificial intelligence applications in NLP, biomedical, and malware classification: A literature review","Proceedings of the 2019 Computing Conference, Springer",n,
+2001,ED Liddy,Natural language processing,Syracuse University,n,
+2011,"D Chen, R Mooney",Learning to interpret natural language navigation instructions from observations,"Proceedings of the AAAI Conference on Artificial Intelligence, AAAI",n,
+2018,"S Liu, Z Li, T Li, V Srikumar, V Pascucci, et al.",Nlize: A perturbation-driven visual interrogation tool for analyzing and interpreting natural language inference models,IEEE Transactions on Visualization and Computer Graphics,n,
+2018,"J Song, J Kim, JK Lee",NLP and deep learning-based analysis of building regulations to support automated rule checking system,ISARC. Proceedings of the International Symposium on Automation and Robotics in Construction,y,y
+2017,J Thanaki,Python natural language processing,"Book, Google.com",n,
+2018,NO Nawari,Building information modeling: Automated code checking and compliance processes,"Book, Google.com",y,n
+2019,"P Ghannad, YC Lee, J Dimyadi, W Solihin",Automated BIM data validation integrating open-standard schema with visual programming language,"Advanced Engineering Informatics, Elsevier",n,
+2019,"Q Yang, J Cranshaw, S Amershi, ST Iqbal, et al.",Sketching nlp: A case study of exploring the right things to design with language intelligence,"Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems, ACM",n,
+2019,YS Akbaş,A Formal representation of building codes to facilitate BIM-based automated code-checking,"Open Access Thesis, Middle East Technical University (METU)",y,n
+2003,"M Mateas, A Stern","Integrating plot, character and natural language processing in the interactive drama Façade","Proceedings of the 1st International Conference on Technologies for Interactive Digital Storytelling and Entertainment, Springer",n,
+2019,NO Nawari,A generalized adaptive framework (GAF) for automating code compliance checking,Buildings,y,n
+2019,D Sarkar,Text analytics with Python: a practitioner's guide to natural language processing,Springer,n,
