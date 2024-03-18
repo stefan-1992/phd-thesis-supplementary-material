@@ -69,7 +69,17 @@ The supplementary material for "Improving Semantic Parsing through Additional Tr
 
 
 ## Chapter 7: Improving the Semantic Parsing of Building Regulations through Intermediate Representations (Fuchs et al., 2023b)
-- To be added soon.
+- data/results/*: Results for the experiments in Chapter 7. The three runs per setup were averaged in the _combined files.
+
+- egice_results.ipynb: Generate the _combined result files.
+- egice_training.py: Training the T5 model with a custom training loop.
+- training_utils.py: Utility functions for the training loop.
+- egice_experiment_rev_ir.py: Reversible IR experiments.
+- egice_experiment_ir.py: Lossy IR experiments.
+- egice_experiment_paraphrase.py: Paraphrase as IR experiments.
+- egice_experiment_consistency.py: Self Consistency experiments.
+- egice_experiment_paraphrase_noir.py: Training with paraphrases without IRs experiment.
+- egice_experiment_thesis.py: Baseline without generation parameters.
 
 ## Chapter 8: Using Large Language Models for the Interpretation of Building Regulations (Fuchs et al., in press)
 - To be added soon.
