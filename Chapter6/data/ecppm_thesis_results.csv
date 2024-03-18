@@ -1,0 +1,7 @@
+Name,test/bleu,test/lrml_f_score,test/lrml_precision,test/lrml_recall,test/length_ratio,BLEU,BLEU SD,F1,F1 SD,Precision,Prec SD,Recall,Recall SD,Length,Name
+T5-AMR-ir_paper_baseline-b4_0.0003_ecppm_ir_baseline_42,69.57349952,57.40525489,57.79315181,57.02253024,1.002951745,68.82952598,1.16294224,55.79879983,1.731589384,55.79879983,1.731589384,57.7320078,0.653954333,1.010737509,T5-AMR-ir_paper_baseline-b4_0.0003_ecppm_ir_baseline_42
+T5-AMR-ir_paper_baseline-b4_0.0003_ecppm_ir_baseline_42,69.42568806,56.56743107,54.92540566,58.31066054,1.001668378,,,,,,,,,,T5-AMR-ir_paper_baseline-b4_0.0003_ecppm_ir_baseline_42
+T5-AMR-ir_paper_baseline-b4_0.0003_ecppm_ir_baseline_42,67.48939037,56.22526844,54.67784202,57.86283262,1.027592402,,,,,,,,,,T5-AMR-ir_paper_baseline-b4_0.0003_ecppm_ir_baseline_42
+T5-AMR-random_pre_718-b4_0.0003_ecppm_id_random_42,75.48437147,75.6334028,78.34342644,73.10459856,0.876800468,76.33811587,2.01946209,77.3821998,1.215693445,77.3821998,1.215693445,74.4825079,1.422865089,0.906680315,T5-AMR-random_pre_718-b4_0.0003_ecppm_id_random_42
+T5-AMR-random_pre_718-b4_0.0003_ecppm_id_random_42,78.6442346,75.98100579,76.01561636,75.94642673,0.954302844,,,,,,,,,,T5-AMR-random_pre_718-b4_0.0003_ecppm_id_random_42
+T5-AMR-random_pre_718-b4_0.0003_ecppm_id_random_42,74.88574155,76.0542467,77.78755662,74.39649841,0.888937633,,,,,,,,,,T5-AMR-random_pre_718-b4_0.0003_ecppm_id_random_42

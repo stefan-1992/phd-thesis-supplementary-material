@@ -1,5 +1,4 @@
-# Supplementary Material for the PhD Thesis
-## Title 
+# Supplementary Material for the PhD Thesis with Title:
 Transformer-based Semantic Parsing of Building Regulations: Supporting Regulators in Drafting Machine-Interpretable Rules 
 ## Author
 Stefan Martin Fuchs
@@ -42,7 +41,32 @@ The supplementary material for "Improving Semantic Parsing through Additional Tr
 - cib_prediction.py: Prediction only - Write results to file.
 
 ## Chapter 6: Consistent Formal Representation of Building Regulations (Fuchs et al., 2023c)
-- To be added soon.
+- data/lrml_ds_v1.csv: Original LRML Dataset
+- data/lrml_ds_v2.csv: LRML Dataset with invalid LRML rules removed
+- data/lrml_ds_v3.csv: LRML Dataset with improved alignments - Step 1 - With LRML tokenisation improved
+- data/lrml_ds_v4.csv: LRML Dataset with tacit knowledge added to the input clauses - Step 2 - With LRML tokenisation improved
+- data/lrml_ds_v5.csv: LRML Dataset with LRML rules cleansed - Steps 3-5 - With LRML tokenisation improved
+- data/lrml_ds_v6.csv: LRML Dataset with manual reference cleansing - Base for Reference and Entity cleaning - Without LRML tokenisation improved
+- data/lrml_ds_v7.csv: LRML Dataset with all rules and all data cleansing steps applied - With LRML tokenisation improved
+- data/lrml_ds_v8.csv: LRML Dataset with evaluation-based cleansing applied - Without LRML tokenisation improved - With Reversible IR applied (was reverted for this chapter)
+- data/lrml_ds_doc-exp.csv: Baseline dataset for document-based evaluation - With LRML tokenisation improved
+- data/ecppm_results.xlsx: Results for experiments in Chapter 7. The three runs per setup were averaged.
+- data/ecppm_thesis_results.csv: Results for evaluation-based cleansing. The three runs per setup were averaged.
+- data/eval_pred_annotated_errors.csv: Analysis of Chapter5/data/cib_multi_predictions_for_analysis to identify error classes and their implications
+
+- lrml_score.py: Functions to calculate the LRML F1 score
+- lrml_train_pred.py: Functions for training and predicting LRML
+- lrml_utils.py: Utility functions for the LRML representation
+- lrml_baseline_short_training.py: Experiment to establish initial baseline with 512 token length
+- lrml_baseline_training.py: Experiment to establish initial baseline with all other interventions
+- lrml_cleansing_training.py: Experiments to step-wise evaluate the cleansing process
+- lrml_conditioning_training.py: Experiments to evaluate the value conditioning
+- lrml_remove_training.py: Evaluate the removal of clauses in the value conditioning experiment
+- lrml_document_training.py: Experiments to evaluate the document-based evaluation
+- lrml_random_training.py: Evaluate the random training in the document-based evaluation experiment
+- ecppm_ir_lrml_baseline_training.py: Experiment on the document based-split after the final evaluation-based cleansing
+- ecppm_ir_lrml_random_training.py: Experiment on the random split after the final evaluation-based cleansing
+
 
 ## Chapter 7: Improving the Semantic Parsing of Building Regulations through Intermediate Representations (Fuchs et al., 2023b)
 - To be added soon.
