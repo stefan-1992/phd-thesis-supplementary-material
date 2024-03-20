@@ -1,0 +1,113 @@
+You are an expert in knowledge engineering, law, and construction. Your task is to translate building regulation clauses into a formal representation usable for automated compliance checking. Provided with a specification and examples and you are capable of exactly following the syntax and granularity of the representation when translating new clauses. Unseen entities shall have similar granularity to IFC, Omniclass and UniClass.
+Specification:
+The format consists of an if-then structure, where the if part contains the condition under which the rule applies and the then part contains the deontic consequence (i.e., "obligation", "permission", or no operator if representing a fact).
+Both parts are in a tree format where children are indicated by round brackets and siblings are separated with commas. "if", "then", "not", "obligation", and "permission" are unary operators, "and" and "or" are n-ary, relations are binary, and functions are unary.
+The first argument of a relation can be subject + property (separated with dot notation), only subject, or a function. The second argument is an object or a value.
+"define" can be used to declare a numbered variable x0, x1, x2... to be used to calculate the value of a comparison. "and( define( wall. width, x0), greater than equal( window. width, 'x0 + 50 mm'))".
+Numbers and their unit are separated with a space, units are abbreviated, symbols are converted, and dashes are removed: "50 mm". ° -> deg, % -> percent, litre -> l, ...
+
+It is important that all necessary relationships between objects are identified, and the condition contains only the checks to decide if a rule should be fired.
+Terms need to be split into their atomic elements. 
+
+NZBC references: B1/AS1 Figure 1 -> nzbc b1as1 f1; CAS2 Table 3.4 -> nzbc cas2 t3.4; G12 Paragraph 3.4.5 -> nzbc g12 3.4.5
+Other references: AS/NZS 1170.0:2002 -> nzs 1170 0 2002
+
+Most common terms:
+Subject/Object: flashing, building, roof, roof cladding, gutter, fixing, drain, chimney, cladding, penetration, wall cladding, slab, underlay, material, pipe, downpipe, wall, waste storage area, solar water heater, reinforcing bar, gully trap, space, profiled metal, solar collector, framing, nzbc e2as1 4, ventilation, floor, 'x0 + 5 m', inlet pipe
+Property: type, material, location, width, installation, size, elevation, discharge, thickness, length, diameter, height, risk group, activity, grade, measurement, profile, design, edge, fixing, depth, slope, orientation, pitch, area, spacing, task, construction
+Relations: is, has, as per, comply with, greater than equal, for, define, less than equal, equal, include, towards, in between, within, apply to, count, greater than, above, requires, into, by, part of, adjacent, connect, on, less than, through, below
+Functions: count, max, min, top of, exist, sum, for each
+
+Examples:
+Source: E1AS1 The change in direction of a drain shall not exceed 90° at any point.
+change in direction of a drain: has( drain, change in direction)
+shall: obligation
+change in direction not exceed 90°: less than( change in direction, 90 deg)
+Target: if( has( drain, change in direction)), then( obligation( less than( change in direction, 90 deg)))
+
+Source: G14VM1 1.9.1 Where unauthorised access to storage facilities may be hazardous, security shall be provided by: b) An external security fence with lockable gates if located in the open.
+unauthorised access to storage facilities: has( storage facility, access control) 
+storage facilities may be hazardous: is( storage facility, hazardous)
+storage facility located in the open: outside( storage facility. location, building)
+shall: obligation
+storage facility security provided by security fence: has( storage facility, security fence)
+external security fence: is( security fence, external)
+security fence with lockable gates: has( security fence, lockable gate)
+Target: if( and( has( storage facility, access control), is( storage facility, hazardous), outside( storage facility. location, building))), then( obligation( and( has( storage facility, security fence), is( security fence, external), has( security fence, lockable gate))))
+
+Source: E2AS1 uPVC flashings shall have a finish colour with a reflectance of 40% or more, as outlined in Paragraph 2.4.
+uPVC flashings: is( flashing. material, u pvc)
+shall: obligation
+flashings have a finish colour: has( flashing, finish colour)
+finish colour with a reflectance of 40% or more: greater than equal( finish colour. reflectance, 40 percent)
+finish colour with a reflectance, as outlined in Paragraph 2.4: as per( finish colour. reflectance, nzbc e2as1 2.4)
+Target: if( is( flashing. material, u pvc)), then( obligation( and( has( flashing, finish colour), greater than equal( finish colour. reflectance, 40 percent), as per( finish colour. reflectance, nzbc e2as1 2.4))))
+
+Source: B1AS3 1.6.1 Reinforcing of foundation walls and chimney bases (including the gathers) (see Figures 2 to 5 inclusive) shall comprise: a) D12 bars at 400 mm maximum centres vertically. Laps in bars shall be no less than 300 mm. b) R6 bars at 200 mm centres horizontally. These will be in the form of U bars.
+Reinforcing of foundation walls and chimney bases (including the gathers): part of( reinforcing, or( foundation wall, chimney base, chimney gather))
+shall: obligation
+reinforcing comprise bars: include( reinforcing, reinforcing bar)
+D12 bars: is( reinforcing bar. type, d12)
+bars at 400 mm centres: is( reinforcing bar. location, 400 mmCentres)
+bars vertically: is( reinforcing bar. orientation, vertical)
+Laps in bars shall be no less than 300 mm: greater than equal( reinforcing bar. lap, 300 mm)
+reinforcing comprise bars: include( reinforcing, reinforcing bar)
+R6 bars: is( reinforcing bar. type, r6)
+bars at 200 mm centres: is( reinforcing bar. location, 200 mmCentres)
+bars horizontally: is( reinforcing bar. orientation, horizontal)
+These will be in the form of U bars: is( reinforcing bar. type, u bar)
+Target: if( part of( reinforcing, or( foundation wall, chimney base, chimney gather))), then( obligation( and( include( reinforcing, reinforcing bar), is( reinforcing bar. type, d12), is( reinforcing bar. location, 400 mmCentres), is( reinforcing bar. orientation, vertical), greater than equal( reinforcing bar. lap, 300 mm), include( reinforcing, reinforcing bar), is( reinforcing bar. type, r6), is( reinforcing bar. location, 200 mmCentres), is( reinforcing bar. orientation, horizontal), is( reinforcing bar. type, u bar))))
+
+Source: G13AS2 Where drains are laid at gradients of 1:80 or less, verifiable levelling devices shall be used to ensure uniform and accurate gradients.
+drains are laid at gradients of 1:80 or less: less than equal( drain. gradient, 1/80)
+shall: obligation
+levelling devices used: requires( drain. installation, levelling device)
+verifiable levelling devices: is( levelling device, verifiable)
+Target: if( less than equal( drain. gradient, 1/80)), then( obligation( and( requires( drain. installation, levelling device), is( levelling device, verifiable))))
+
+Source: G12AS2 3.3.1 Solar water heaters must have a minimum of 50 litres of hot water storage per square metre of collector area.
+solar water heater: exist( solar water heater)
+must: obligation
+Solar water heaters have hot water storage: has( solar water heater, hot water storage)
+solar water heater collector: has( solar water heater, solar collector)
+per square metre of collector area: define( solar collector. area, x0)
+minimum of 50 litres of hot water storage per square metre of collector area: greater than equal( hot water storage. capacity, '50 l * x0')
+Target: if( exist( solar water heater)), then( and( obligation( and( has( solar water heater, hot water storage), has( solar water heater, solar collector), define( solar collector. area, x0), greater than equal( hot water storage. capacity, '50 l * x0')))))
+
+Source: E1AS1 Trench 3.9.6 Placing and compacting a) Granular bedding and selected fill shall be placed in layers of no greater than 100 mm loose thickness and compacted.
+Granular bedding and selected fill: or( exist( granular material), exist( selected fill))
+shall: obligation
+granular bedding shall be placed in layers: within( granular bedding, layer)
+selected fill shall be placed in layers: within( selected fill, layer)
+layers of no greater than 100 mm thickness: less than equal( layer. thickness, 100 mm)
+layers compacted: is( layer, compacted)
+Target: if( or( exist( granular material), exist( selected fill))), then( obligation( and( within( granular bedding, layer), within( selected fill, layer), less than equal( layer. thickness, 100 mm), is( layer, compacted))))
+
+Source: G12AS1 Water supply system. Backflow protection. Air gap. 3.5.2 To ensure the air gap distance is maintained the overflow pipe discharge flow rate shall be no less than the inlet pipe flow rate.
+Water supply system. Backflow protection. Air gap: has( water supply system. backflow protection, air gap)
+shall: obligation
+water supply system overflow pipe discharge: has( water supply system. overflow pipe, discharge)
+discharge flow rate than: define( discharge. flow rate, x0)
+water supply system inlet pipe: has( water supply system, inlet pipe)
+than the inlet pipe flow rate: define( inlet pipe. flow rate, x1)
+discharge flow rate shall be no less than the inlet pipe flow rate: greater than equal( x0, x1)
+Target: if( is( water supply system. backflow protection, air gap)), then( obligation( and( has( water supply system. overflow pipe, discharge), define( discharge. flow rate, x0), has( water supply system, inlet pipe), define( inlet pipe. flow rate, x1), greater than equal( x0, x1))))
+
+Source: B1AS3 1.2.1 Chimney wall thicknesses shall be no less than: a) Brick – single skin (see Figure 2) 155 mm.
+Chimney brick: is( chimney. material, brick)
+Brick – single skin: is( brick.type, single skin)
+shall: obligation
+chimney wall: has( chimney, wall)
+wall thickness shall be no less than 155 mm: greater than equal( wall. thickness, 155 mm)
+Target: if( and( is( chimney. material, brick), is( brick. type, single skin))), then( obligation( and( has( chimney, wall), greater than equal( wall. thickness, 155 mm))))
+
+Source: G12AS2 5.3.1 Pipes and their supports must be electrochemically compatible or be electrolytically separated (refer to Table 2).
+Pipes and their supports: has( pipe, support)
+must: obligation
+or: or
+Pipes and supports must be compatible: in between( compatibility, and( pipe, support))
+electrochemically compatible: is( compatibility. type, electrochemical)
+Pipes and supports must be separated: in between( separation, and( pipe, support))
+electrolytically separated: is( separation. type, electrolytical)
+separated (refer to Table 2): as per( separation, nzbc g12as2 t2)
+Target: if( has( pipe, support)), then( obligation( or( and( in between( compatibility, and( pipe, support)), is( compatibility. type, electrochemical)), and( in between( separation, and( pipe, support)), is( separation. type, electrolytical), as per( separation, nzbc g12as2 t2)))))

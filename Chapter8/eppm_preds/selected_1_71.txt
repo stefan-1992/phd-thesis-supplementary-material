@@ -1,0 +1,96 @@
+define("risk group SI bed", "collection of individuals undergoing care or detention"), condition(most_functionally_similar( "bed", [])
+
+[
+  in_category_furniture("Beds")
+  or in_category_furniture("+urniture sections including if referring comfort:=Long term posture",4 {- covers matches like1.{surfaces}></bb-rel}->{rg meaning:Object.relate(name(subject="[subsection(this def))_id"]) assumes(reComp :Set=["Dr001"]} */ ==> meaning: "+a] or [Identifier=com.bitrock.bed.recliner]
+
+
+#
+	fish_info_112158351875963_f :-
+Lemma function('Element array'),
+Neg1 =(sit_el>'hostirlements_), CasSect77 where -_87082275693979910_n['human presence restr_stack_occ_page']="Someone inmate her execution department dependent load need leg_se":
+ (
+	main elements F814_RE vFFcas189_rf.vmodel().Execute(count_symbol(fCS))"
+ ),
+out(tension_adv(var(kJ65xpT_dc506_r),7'b\dEoCsPGLOrt))
+.
+					effectually(se),
+bed(chair[T0ryGu]>(_642867,xN:DCC}emu&',non_med)[ix + bid.t_type_schema.ordinal_cnt_dict(catCount++,us= #cree)+"spring included table(f*si,d))*stack_gen.comp(y=scif(valis_rep_part.D_g,writeImplIndex=root(v=(-nn_kwue!=(='Occ_plrpagemedadv_mode:def_pr","Reto pre_space_demHeightF{(opta,['==d+=']
+
+
+if( exist( building activities), then( obligation( use( Acceptable Solution CAS2), within( risk groups specified in Paragraph 1.1.1), described in Table 1.1)))
+if( and( exist( structural framing members), exist( building elements), connected( structural framing members, building elements, with FRR)), then( obligation( and( rated( structural framing members, not less than, building elements), connected( structural framing members, building elements))))
+if(exist(building)), then(obligation(has(escape route), provides(protection, occupant), leads_to(safe place), in_case_of(fire)))
+if(exist(escape routes)), then(comply(NZBC D1))
+if( exist( ramps) or exist( stairs) or exist( ladders) or exist( landings) or exist( handrails) or exist( doors) or exist( vision panels) or exist( openings)), then( obligation( comply( Acceptable Solution D1/AS1)))
+if( and( exist( adjoining firecells), exist( highest life rating)), then( obligation( fire separation( adjoining firecells, highest life rating))))
+if( and( exist( adjoining firecells), exist( highest property rating)), then( obligation( fire separation( adjoining firecells, highest property rating))))
+if( exist( open vented storage water heater)), then( obligation( have( vent pipe complying with Paragraph 6.8)))
+if( exist( backflow prevention device)), then( obligation( and( manufactured( as per( AS/NZS 2845.1 Section 12)), type( reduced pressure zone), reference( Figure 2 (a)))))
+if( exist( open vented low pressure storage water heaters), then( NZS 4603 is acceptable solution, and( NZS 4603 exceeds performance criteria of NZBC G12))))
+if( exist( unvented storage water heaters), then( NZS 4607 is acceptable solution, may exceed performance criteria of NZBC G12))
+if( or( greater( gradient, 22.5°), greater( direction, 22.5°))), then( obligation( provide( inspection chamber)))
+if( exist( pipes), and( exist( concrete or masonry elements), obligation( or( wrapped( pipes, flexible material), passed_through( pipes, sleeve or duct)))))
+if( or( exist( suspended floors), exist( slabs on ground))), then( obligation( greater than equal( height above ground, 150 mm), is( height, immediately adjacent to building))))
+if( exist( drain)), then( obligation( greater than equal( drain. internal diameter, 85 mm), capable( drain, handling, rainfall), during( storm)))
+if( or( exist( temperature/pressure relief valve), exist( pressure relief valve), exist( expansion control valve))), then( obligation( fit( relief valve drain), to( temperature/pressure relief valve, pressure relief valve, expansion control valve)))
+if( and( exist( Figure 13), or( exist( fine-grained soil), exist( granular material))), then( obligation( and( within( selected compacted fill, Figure 13), within( fine-grained soil, selected compacted fill), within( granular material, selected compacted fill), is( selected compacted fill, free from topsoil), is( selected compacted fill, free from rubbish), less than equal( max( particle size), 20 mm)))))
+if( in( Canterbury earthquake region), then( obligation( greater than( earthquake zone factor, 0.6))))
+if( and( exist( laminated safety glass barrier), less than equal( count( supported edges), 3), all( supported edges, supported by( or( structural sealant joints, continuous clamps)))), then( obligation( and( resist( concentrated load, 0.2 kN), not deflect( more than, 250 mm), all( panes, fractured)))))
+if( exist( bituminous flashings)), then( obligation( use( bituminous flashings, in accordance with( Table 20))))
+if( exist( cladding system)), then( obligation( meet( requirements( NZBC E2.2 to E2.3.7))))
+if( exist( glass design), then( obligation( comply( with( Table 16), within( Structural balustrade), with( two-edge support))))
+if( exist( slatted deck)), then( allow( upper surface level, same as non-cantilevered deck threshold level, if( deck formed as shown in Figure 14(c))))
+if( tile.type == "Type II"), then( obligation( and( has( tile, "single profile"), has( tile.water_course_depth, greater than equal(25 mm)))))
+if( required( AS 2050, Table 20, underlay)), then( compliance( Table 23, underlay)))
+if( exist( handrails), then( obligation( not( within( posts, membrane roofs))), obligation( not( within( posts, decks))), isCovered( handrails, false)))
+if( and( exist( profiled metal roof cladding), or( less than( roof pitch, 25°), in( building, {High, Very High, Extra High} wind zone))), then( obligation( have( stopends, top ends), as( shown in Figure 49), for( trapezoidal and trough profile metal roof cladding))))
+if( and( exist( timber floor framing), exist( wall claddings))), then( obligation( and( meet( timber floor framing, NZS 3604), within( wall framing, clearance), in( Table 18))))
+if(exist(solar collectors)), then(within(solar collectors, +/- 90 degrees of geographic north), satisfies(NZBC Clause H1.3.4(a)))
+if( exist( solar water heater), then( obligation( and( meet_requirements( fixing, Paragraphs 2.1.1), meet_requirements( fixing, Paragraphs 2.1.2), meet_requirements( fixing, Paragraphs 2.1.3), meet_requirements( fixing, Paragraphs 2.1.4)))))
+if( exist( parapets)), then( obligation( comply( Paragraph 6.0)))
+if( and( exist( pumped solar water heater), exist( separately mounted tank), exist( AS/NZS 4692.2)), then( obligation( comply( tank insulation requirements))))
+if(exist(fixing), exist(timber)), then(obligation(distance(center(fixing), end(timber)) >= 10*diameter(fixing)))
+if( and( solar collectors mounted parallel to roof, less than equal( elevation, 50 mm))), then( obligation( or( underlying purlins conforming to Paragraph 6.4.1 (a) or (b), underlying rafters or trusses with connections conforming with Paragraphs 6.4.1 (a) or (c), collector support rails conforming to Paragraph 6.5))))
+if( exist( discharge pipes), then( obligation( vent( discharge pipes), where( required( by( Table 5))))))
+if( exist( air admittance valve)), then( obligation( manufactured( to( any( ASSE 1050, ASSE 1051, EN 12380, AS/NZS 4936)))))
+if( exist( water trap)), then( obligation( or( removable( water trap), dismantlable( water trap), cleaning_eye( water trap))))
+if( connected( floor waste pipes, floor waste stack)), then( no( venting( individual pipes))))
+if( exist( rigid pipes)), then( obligation( have( flexible joints), resist( damage from differential settlement)))
+if( exist( access points), then( allow( access points, in( space( containing( soil fixture))))))
+if( drain. required == false), then( obligation( disconnect( drain, foul water drainage system, at( junction with live drain), or( at( property boundary)))))
+if( exist(drain)), then( obligation( and( is( drain.grade, even), not( exist(obstruction, within(drain)))),))
+if( exist( waste chute with side-entry hopper)), then( obligation( and( greater than equal( internal diameter, 450 mm), is( chute, self-cleaning), is( chute, vertical), has( smooth joints), is( chute, vented at top above roof line), is( chute, vented at bottom above container), terminates( centrally over suitable container), container( located in room complying with Paragraphs 3.0.1 to 3.0.9))))
+if( or( type(brickwork), type(concrete), type(precast pumice concrete)), and( connected_to( building, or( compliance(NZS 3604), compliance(NZS 4229)))))
+if( or( exist( space), and( exist( storage bin), exist( food waste))), then( obligation( and( within( wall, space), is( wall, concrete), or( is( wall, galvanised sheet steel), is( wall, vinyl), is( wall, similar material)))))
+if( exist( opening windows)), then( obligation( screen( opening windows), prevent( entry( insects, vermin))))
+if(comply(nzbc_g12, water_supply_Tap_variation_installed(date.created-1_week.minus_workdays(3), make_suppliers("water_fixture_manufacturer_yz")), #(human error rate checks);
+									compliant((for(remote)solution_server.real_port_secure(preparere to,react(intercompute(vm.select(largeScaleISO_timestamp(drifter.indexB),decision)|bytes_loaded_interchanged)))), among_n(channel.availableservers.turn(os.r"unregistered_trans.net$$speed_shift.domain_constant:-j.my_module()*iso244)","hotStone-Lv059-tortaja_IVapCache"), entropy.inspect.elements(audio.possible_energy_powerq_inversion({"package-to-u":config_StorageEmail_to_archive(updatetime=str(IC_sources.current--codegenNum)}, factorize.mod_time_keys(in_ranges):serviceHash(stats_gc_delay_target[id.task_positionage(min_gb_resources_transaction_training,complete)="hoursample_fireVoltage']))), reply.interval)		
+					 =>'hydro_TerdKea922312Providaria_bad_types_point109Min0'))
+		then obligation(existing_(latent_containers.ST922922366.short_MS_singleChain_AllSafetyPre)|annot.notes_context.warning_given(by(waste_manager_userid122747.to_staticmaps.agric))
+																				   
+												                    WITH(allocator_lossRisk_found_Quinine_OS_embed.useServer_logs(promisers.with_keywords(values,maxbias.solution_generator(compatstring.client('obj_policy_key_file_cmp_progbar.assert_themes(cert.loggingStrategy(log(certificate.OS));temp_production_experience()==set('Geo_ExernetPublicPoint_logger693126')).params)))]][#consumercode_version_UpdateUserInfo.filter(u_params=json_call_latency) )-> min_Clc979_LGo049]), priority = Low
+if( exist( building), then( obligation( and( or( exceed( area, 24 m2), less( floor area, limit)), is( chimney type, specific), provide( bracing)))))
+if( exist( chimney connection), then( obligation( provide( number of bracing units, Table 2))))
+if( exist( chimney), then( connected( building, chimney, at( roof level), and( held_by( roof bracket, chimney), or( held_by( roof tie, chimney))))))
+if( exist( ties), less than equal( stack width, 600 mm)), then( obligation( within( ties, location), greater than equal( location. centres, 320 mm))))
+if( or( exist( storage tanks), exist( ponds))), then( obligation( locate( disposal systems, to ensure( containment( spillage))))
+if(exist(collection facilities)), then(obligation(in(area, sufficient access), for(cleaning, clearing of blockages, maintenance)))
+if( exist( small chimneys), then( see( acceptable solution B1/AS3)))
+if( acceptance( industrial liquid waste, sewer)), then( obligation( conveyance( waste, plumbing and drainage disposal system), compliance( system, NZBC G13 Foul Water)))
+if( exist( suspended solids) or exist( material within liquid waste)), then( obligation( install( screens, grit chambers, grease traps or similar appropriate equipment), at( head of piping systems), to( prevent( blockage of piping system))))
+if( exist( piping system), then( obligation( convey( industrial liquid waste), using( gravity flow))))
+if( exist( galvanized steel flashings)), then( obligation( and( greater than equal( BMT, 0.55 mm), or( equal( grade, G550), and( or( equal( grade, G300), in( flashing type, rolled, crimped))), in( corrosion protection, intended exposure zone))))
+if( and( exist( building), exist( drained cavities), exist( acoustic requirements), specified( NZBC Clause G6))), then( exclusion( Acceptable Solution)))
+if( exist( metal flashing), then( obligation( and( within( lap join, metal flashing), within( other metal flashing, lap join), sealed( lap join, neutral cure silicone sealant), with( mechanical fasteners), comply( sealant, Type F, Class 20LM or 25LM of ISO 11600 or low modulus Type II Class A of Federal Specification TT-S-00230C))))
+if( exist( flashing overlaps and upstands)), then( obligation( overlaps and upstands to be as specified in paragraph 4.6 and Table 7))
+if( and( exist( window or door), exist( flashing)), then( obligation( and( overlap( cladding, flashing), clearance( cladding, flashing, Table 7))))
+if( exist( metal roof), then( obligation( and( within( roof cladding, effective lap), within( upper edge, hem), is( effective lap, in accordance with Table 7)))))
+obligation( and( exist( profiled metal roof cladding), forAll( fixings, and( through( crests), penetrate( purlins, greaterThanEqual( 40 mm, if( nail fixing, 30 mm, if( screw fixing)))), include( sealing washers, of( neoprene, lessThanEqual( 15%, carbon black content, weight))))))
+if( exist( concrete ground slab), then( obligation( and( within( wall cladding), less than equal( cladding base height, 100 mm) if paved surface, less than equal( cladding base height, 175 mm) if unpaved surface, overlap( cladding base, concrete slab, 50 mm), offset( cladding base, concrete slab, 6 mm) if direct fixed cladding, prevent( capillary action)))))
+if( exist( gully trap)), then( obligation( and( exist( wastepipes), within( wastepipes, gully trap), easy_cleaning( gully trap))))
+if( exist( gully trap), then( obligation( within( gully trap, top of water seal), less than equal( distance( top of water seal, top of gully dish), 600 mm))))
+if( exist( metal capping), and( exist( parapet or enclosed balustrade), both( end, constrained))), then( obligation( make allowance for expansion)))
+if( exist( fire safety system), within( firecells), is( fire safety system, specified( Table 2.2d)), for( risk group VP))
+if(exist(reconstituted wood product)), then(maximum(moisture content, 18%))
+if( exist(timber), then( obligation( measure( moisture content), using( recommended procedure( Scion publication 'Measurement of moisture content of Wood'), with( electrical resistance type moisture meters), having( insulated probes), taking( representative samplings of measurements), calibrated( to AS/NZS 1080.1 Appendix E), inserting( probes, to at least 1/3 the depth of timber being measured, at a distance exceeding 200 mm from board ends), applying( correction factors for timber species, temperature, and treatment type (outlined in Scion publication above)))))

@@ -82,7 +82,19 @@ The supplementary material for "Improving Semantic Parsing through Additional Tr
 - egice_experiment_thesis.py: Baseline without generation parameters.
 
 ## Chapter 8: Using Large Language Models for the Interpretation of Building Regulations (Fuchs et al., in press)
-- To be added soon.
+- eppm_preds/*: Predictions and csv files with the used used exemplars for all experiments in Chapter 8.
+- prompts/*: Prompts for contextualisation and chain-of-thought prompting.
+- data/eppm_num_samples.csv: How many samples where used in the GPT-4 per clause sampling experiments
+- data/eppm_results.csv: The exeperimental results as logged with Weights and Biases.
+- data/lrml_additional.csv: Intermediate results for the additional training data experiments.
+- data/lrml_ds_v8_add_data_150.csv: The additional training data added to lrml_ds_v8_sel.
+- data/lrml_ds_v8_gen_data.csv: The recreated dataset lrml_ds_v8_sel using GPT-4.
+- data/lrml_ds_v8_sel.csv: The V8 LRML dataset with columns including the manual selection of the exemplar rules.
+- eppm_experiment.ipynb: The main experiment file for the GPT-4 experiments.
+- eppm_data_train.py: Training T5 with GPT4 as teacher model.
+- egice_training.py/lrml_score.py/training_utils.py: The utility files for the training and evaluation of the T5 model as in Chapter 7.
+- lrml_utils.py: Additional utility functions for the LRML reversible IR in Chapter 7.
+
 
 ## Chapter 9: Transformer-based Autocompletion for Semi-Automated Translation into Formal Representations (Fuchs et al., 2023a)
 - To be added soon.

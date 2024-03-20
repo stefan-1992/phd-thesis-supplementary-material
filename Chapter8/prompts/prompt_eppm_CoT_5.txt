@@ -1,0 +1,51 @@
+Source: G12AS2 3.3.1 Solar water heaters must have a minimum of 50 litres of hot water storage per square metre of collector area.
+Let's think step by step:
+The condition is that a solar water heater exists: exist( solar water heater)
+There is a must: obligation
+The solar water heater must have hot water storage: has( solar water heater, hot water storage)
+The solar water heater has a solar collector: has( solar water heater, solar collector)
+The solar collector area is part of a comparison, so we store it in a variable: define( solar collector. area, x0)
+The hot water storage capacity is greater than or equal to 50 litres times the solar collector area x0: greater than equal( hot water storage. capacity, '50 l * x0')
+Target: if( exist( solar water heater)), then( and( obligation( and( has( solar water heater, hot water storage), has( solar water heater, solar collector), define( solar collector. area, x0), greater than equal( hot water storage. capacity, '50 l * x0')))))
+
+Source: E1AS1 Trench 3.9.6 Placing and compacting a) Granular bedding and selected fill shall be placed in layers of no greater than 100 mm loose thickness and compacted.
+Let's think step by step:
+The conditions is that there is granular material or selected fill: or( exist( granular material), exist( selected fill))
+There is a shall: obligation
+The granular bedding shall be placed in layers: within( granular bedding, layer)
+The selected fill shall be placed in layers: within( selected fill, layer)
+The layer thickness shall be no greater than 100 mm: less than equal( layer. thickness, 100 mm)
+The layer shall be compacted: is( layer, compacted)
+Target: if( or( exist( granular material), exist( selected fill))), then( obligation( and( within( granular bedding, layer), within( selected fill, layer), less than equal( layer. thickness, 100 mm), is( layer, compacted))))
+
+Source: G12AS1 Water supply system. Backflow protection. Air gap. 3.5.2 To ensure the air gap distance is maintained the overflow pipe discharge flow rate shall be no less than the inlet pipe flow rate.
+Let's think step by step:
+The condition is that the backflow protection of the water supply system has an air gap: has( water supply system. backflow protection, air gap)
+There is a shall: obligation
+The water supply system's overflow pipe has discharge: has( water supply system. overflow pipe, discharge)
+The discharge flow rate is part of a comparison, so we store it in a variable: define( discharge. flow rate, x0)
+The water supply system has a inlet pipe: has( water supply system, inlet pipe)
+The inlet pipe flow rate is part of a comparison, so we store it in a second variable: define( inlet pipe. flow rate, x1)
+The discharge flow rate x0 is greater than or equal to the inlet pipe flow rate x1: greater than equal( x0, x1)
+Target: if( is( water supply system. backflow protection, air gap)), then( obligation( and( has( water supply system. overflow pipe, discharge), define( discharge. flow rate, x0), has( water supply system, inlet pipe), define( inlet pipe. flow rate, x1), greater than equal( x0, x1))))
+
+Source: B1AS3 1.2.1 Chimney wall thicknesses shall be no less than: a) Brick – single skin (see Figure 2) 155 mm.
+Let's think step by step:
+The condition is that the chimney is made of brick: is( chimney. material, brick)
+The brick type is single skin: is( brick.type, single skin)
+There is a shall: obligation
+The chimney wall: has( chimney, wall)
+The wall thickness shall be no less than 155 mm: greater than equal( wall. thickness, 155 mm)
+Target: if( and( is( chimney. material, brick), is( brick. type, single skin))), then( obligation( and( has( chimney, wall), greater than equal( wall. thickness, 155 mm))))
+
+Source: G12AS2 5.3.1 Pipes and their supports must be electrochemically compatible or be electrolytically separated (refer to Table 2).
+Let's think step by step:
+The condition is that the pipe has a support: has( pipe, support)
+There is a must: obligation
+There are two options for compliance: or
+The pipe and the support must be compatible: in between( compatibility, and( pipe, support))
+The compatibility type is electrochemical: is( compatibility. type, electrochemical)
+The other option is a separation between the pipe and the support: in between( separation, and( pipe, support))
+The separation type is electrolytical: is( separation. type, electrolytical)
+The separation shall be as per Table 2: as per( separation, nzbc g12as2 t2)
+Target: if( has( pipe, support)), then( obligation( or( and( in between( compatibility, and( pipe, support)), is( compatibility. type, electrochemical)), and( in between( separation, and( pipe, support)), is( separation. type, electrolytical), as per( separation, nzbc g12as2 t2)))))

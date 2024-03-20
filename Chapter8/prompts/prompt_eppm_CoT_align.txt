@@ -1,0 +1,92 @@
+Source: E1AS1 The change in direction of a drain shall not exceed 90° at any point.
+change in direction of a drain: has( drain, change in direction)
+shall: obligation
+change in direction not exceed 90°: less than( change in direction, 90 deg)
+Target: if( has( drain, change in direction)), then( obligation( less than( change in direction, 90 deg)))
+
+Source: G14VM1 1.9.1 Where unauthorised access to storage facilities may be hazardous, security shall be provided by: b) An external security fence with lockable gates if located in the open.
+unauthorised access to storage facilities: has( storage facility, access control) 
+storage facilities may be hazardous: is( storage facility, hazardous)
+storage facility located in the open: outside( storage facility. location, building)
+shall: obligation
+storage facility security provided by security fence: has( storage facility, security fence)
+external security fence: is( security fence, external)
+security fence with lockable gates: has( security fence, lockable gate)
+Target: if( and( has( storage facility, access control), is( storage facility, hazardous), outside( storage facility. location, building))), then( obligation( and( has( storage facility, security fence), is( security fence, external), has( security fence, lockable gate))))
+
+Source: E2AS1 uPVC flashings shall have a finish colour with a reflectance of 40% or more, as outlined in Paragraph 2.4.
+uPVC flashings: is( flashing. material, u pvc)
+shall: obligation
+flashings have a finish colour: has( flashing, finish colour)
+finish colour with a reflectance of 40% or more: greater than equal( finish colour. reflectance, 40 percent)
+finish colour with a reflectance, as outlined in Paragraph 2.4: as per( finish colour. reflectance, nzbc e2as1 2.4)
+Target: if( is( flashing. material, u pvc)), then( obligation( and( has( flashing, finish colour), greater than equal( finish colour. reflectance, 40 percent), as per( finish colour. reflectance, nzbc e2as1 2.4))))
+
+Source: B1AS3 1.6.1 Reinforcing of foundation walls and chimney bases (including the gathers) (see Figures 2 to 5 inclusive) shall comprise: a) D12 bars at 400 mm maximum centres vertically. Laps in bars shall be no less than 300 mm. b) R6 bars at 200 mm centres horizontally. These will be in the form of U bars.
+Reinforcing of foundation walls and chimney bases (including the gathers): part of( reinforcing, or( foundation wall, chimney base, chimney gather))
+shall: obligation
+reinforcing comprise bars: include( reinforcing, reinforcing bar)
+D12 bars: is( reinforcing bar. type, d12)
+bars at 400 mm centres: is( reinforcing bar. location, 400 mmCentres)
+bars vertically: is( reinforcing bar. orientation, vertical)
+Laps in bars shall be no less than 300 mm: greater than equal( reinforcing bar. lap, 300 mm)
+reinforcing comprise bars: include( reinforcing, reinforcing bar)
+R6 bars: is( reinforcing bar. type, r6)
+bars at 200 mm centres: is( reinforcing bar. location, 200 mmCentres)
+bars horizontally: is( reinforcing bar. orientation, horizontal)
+These will be in the form of U bars: is( reinforcing bar. type, u bar)
+Target: if( part of( reinforcing, or( foundation wall, chimney base, chimney gather))), then( obligation( and( include( reinforcing, reinforcing bar), is( reinforcing bar. type, d12), is( reinforcing bar. location, 400 mmCentres), is( reinforcing bar. orientation, vertical), greater than equal( reinforcing bar. lap, 300 mm), include( reinforcing, reinforcing bar), is( reinforcing bar. type, r6), is( reinforcing bar. location, 200 mmCentres), is( reinforcing bar. orientation, horizontal), is( reinforcing bar. type, u bar))))
+
+Source: G13AS2 Where drains are laid at gradients of 1:80 or less, verifiable levelling devices shall be used to ensure uniform and accurate gradients.
+drains are laid at gradients of 1:80 or less: less than equal( drain. gradient, 1/80)
+shall: obligation
+levelling devices used: requires( drain. installation, levelling device)
+verifiable levelling devices: is( levelling device, verifiable)
+Target: if( less than equal( drain. gradient, 1/80)), then( obligation( and( requires( drain. installation, levelling device), is( levelling device, verifiable))))
+
+Source: G12AS2 3.3.1 Solar water heaters must have a minimum of 50 litres of hot water storage per square metre of collector area.
+solar water heater: exist( solar water heater)
+must: obligation
+Solar water heaters have hot water storage: has( solar water heater, hot water storage)
+solar water heater collector: has( solar water heater, solar collector)
+per square metre of collector area: define( solar collector. area, x0)
+minimum of 50 litres of hot water storage per square metre of collector area: greater than equal( hot water storage. capacity, '50 l * x0')
+Target: if( exist( solar water heater)), then( and( obligation( and( has( solar water heater, hot water storage), has( solar water heater, solar collector), define( solar collector. area, x0), greater than equal( hot water storage. capacity, '50 l * x0')))))
+
+Source: E1AS1 Trench 3.9.6 Placing and compacting a) Granular bedding and selected fill shall be placed in layers of no greater than 100 mm loose thickness and compacted.
+Granular bedding and selected fill: or( exist( granular material), exist( selected fill))
+shall: obligation
+granular bedding shall be placed in layers: within( granular bedding, layer)
+selected fill shall be placed in layers: within( selected fill, layer)
+layers of no greater than 100 mm thickness: less than equal( layer. thickness, 100 mm)
+layers compacted: is( layer, compacted)
+Target: if( or( exist( granular material), exist( selected fill))), then( obligation( and( within( granular bedding, layer), within( selected fill, layer), less than equal( layer. thickness, 100 mm), is( layer, compacted))))
+
+Source: G12AS1 Water supply system. Backflow protection. Air gap. 3.5.2 To ensure the air gap distance is maintained the overflow pipe discharge flow rate shall be no less than the inlet pipe flow rate.
+Water supply system. Backflow protection. Air gap: has( water supply system. backflow protection, air gap)
+shall: obligation
+water supply system overflow pipe discharge: has( water supply system. overflow pipe, discharge)
+discharge flow rate than: define( discharge. flow rate, x0)
+water supply system inlet pipe: has( water supply system, inlet pipe)
+than the inlet pipe flow rate: define( inlet pipe. flow rate, x1)
+discharge flow rate shall be no less than the inlet pipe flow rate: greater than equal( x0, x1)
+Target: if( is( water supply system. backflow protection, air gap)), then( obligation( and( has( water supply system. overflow pipe, discharge), define( discharge. flow rate, x0), has( water supply system, inlet pipe), define( inlet pipe. flow rate, x1), greater than equal( x0, x1))))
+
+Source: B1AS3 1.2.1 Chimney wall thicknesses shall be no less than: a) Brick – single skin (see Figure 2) 155 mm.
+Chimney brick: is( chimney. material, brick)
+Brick – single skin: is( brick.type, single skin)
+shall: obligation
+chimney wall: has( chimney, wall)
+wall thickness shall be no less than 155 mm: greater than equal( wall. thickness, 155 mm)
+Target: if( and( is( chimney. material, brick), is( brick. type, single skin))), then( obligation( and( has( chimney, wall), greater than equal( wall. thickness, 155 mm))))
+
+Source: G12AS2 5.3.1 Pipes and their supports must be electrochemically compatible or be electrolytically separated (refer to Table 2).
+Pipes and their supports: has( pipe, support)
+must: obligation
+or: or
+Pipes and supports must be compatible: in between( compatibility, and( pipe, support))
+electrochemically compatible: is( compatibility. type, electrochemical)
+Pipes and supports must be separated: in between( separation, and( pipe, support))
+electrolytically separated: is( separation. type, electrolytical)
+separated (refer to Table 2): as per( separation, nzbc g12as2 t2)
+Target: if( has( pipe, support)), then( obligation( or( and( in between( compatibility, and( pipe, support)), is( compatibility. type, electrochemical)), and( in between( separation, and( pipe, support)), is( separation. type, electrolytical), as per( separation, nzbc g12as2 t2)))))
