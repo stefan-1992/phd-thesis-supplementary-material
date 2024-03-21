@@ -97,7 +97,8 @@ The supplementary material for "Improving Semantic Parsing through Additional Tr
 
 
 ## Chapter 9: Transformer-based Autocompletion for Semi-Automated Translation into Formal Representations (Fuchs et al., 2023a)
-- To be added soon.
+- egice_training.py/lrml_score.py/training_utils.py/lrml_utils.py: The utility files for the training and evaluation of the T5 model as in Chapter 7 and 8.
+- ec3_para.py: Training a T5 model for LRML autocompletion. The model is trained using both, parapharases and the original clauses.
 
 # Disclaimer
 The legal clauses used to train and evaluate the transformer-based semantic parser come from the Acceptable Solutions and Verification Methods for the New Zealand Building Codes (https://www.building.govt.nz/building-code-compliance/). The legal clauses are used for research purposes only and are not intended to be used for any other purpose. The legal clauses are not up-to-date and should not be used for any regulatory or compliance purposes. For alignment purposes, some paragraphs were split into multiple clauses, and some information has been removed. The legal clauses are provided as is and without any warranty.
