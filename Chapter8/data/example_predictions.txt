@@ -1,0 +1,283 @@
+Source: CAS2 1.4.6 For the purposes of risk group SI the term 'bed' means the number of people that are under care or detention. It can include people on: a) Beds, or b) Recliner or lounge chairs, or c) Dentist chairs, or d) Treatment tables, or e) Any other furniture where an occupant may be for a period of treatment, in care or detention.
+(51.877711957171314, 'if( is( space. risk group, si)), then( define( bed, and( or( is( furniture, bed), is( furniture, recliner chair), is( furniture, lounge chair), is( furniture, dentist chair), is( furniture, treatment table), is( furniture, other)), is( furniture, occupant))))')
+Target: if( is( space. risk group, si)), then( and( is( bed, person), within( person, or( care, detention)), include( bed, or( recliner, lounge chair, dentist chair, treatment table, treatment furniture))))
+
+Source: CAS2 This Acceptable Solution is one of three Acceptable Solutions that provide a means of establishing compliance with NZBC Clauses C1 to C6 Protection from Fire. It can be used for the building activities covered by risk groups specified in Paragraph 1.1.1 and described in Table 1.1.
+(28.864273240933812, 'if( and( apply to( nzbc c1c6, building), as per( building. risk group, nzbc cas2 t1.1))), then( apply to( nzbc cas2, building))')
+Target: if( and( comply with( building, nzbc cas2), as per( building. risk group, and( nzbc cas2 1.1.1, nzbc cas2 t1.1)))), then( comply with( building. fire protection, and( nzbc c1, nzbc c2, nzbc c3, nzbc c5, nzbc c6)))
+
+Source: CAS2 2.3.11 Structural framing members connected to building elements with an FRR shall be rated at no less than the building elements to which they are connected. 
+(49.441087149787904, 'if( and( has( structural framing member, connection), has( connection, fire resistance rating)), then( obligation( greater than equal( structural framing member. rating, connection. rating))))')
+Target: if( and( has( building, structural framing member), has( building, element), connect( building. structural framing member, element), has( element, fire resistance rating))), then( obligation( greater than equal( structural framing member. fire resistance rating, fire resistance rating)))
+
+Source: CAS2 3.1.1 All buildings shall have means of escape from fire which include escape routes. An escape route (see Figure 3.1) shall provide protection to any occupant escaping to a safe place from a fire within a building.
+(50.332833412942335, 'if( is( building, fire prone)), then( obligation( and( has( building, means of escape), has( means of escape, escape route), towards( escape route, safe place), from( fire, building), provide( escape route, protection), for( protection, occupants))))')
+Target: if( exist( building)), then( obligation( and( has( building, means of escape from fire), include( means of escape from fire, escape route), has( escape route, fire protection))))
+
+Source: CAS2 3.1.4 Escape routes shall comply with NZBC D1.
+(67.70485724879495, 'if( is( route, escape)), then( obligation( comply with( route, nzbc d1)))')
+Target: if( exist( escape route)), then( obligation( comply with( escape route, nzbc d1)))
+
+Source: CAS2 Ramps, stairs, ladders, landings, handrails, doors, vision panels and openings shall comply with Acceptable Solution D1/AS1.
+(77.03372131749504, 'if( or( is( element, ramp), is( element, stair), is( element, ladder), is( element, landing), is( element, handrail), is( element, door), is( element, vision panel), is( element, opening))), then( obligation( comply with( element, nzbc d1as1))))')
+Target: if( is( building. element, or( ramp, stair, ladder, landing, handrail, door, vision panel, opening))), then( obligation( comply with( building. element, nzbc d1as1)))
+
+Source: CAS2 4.1.1 Adjoining firecells are required to be fire separated from each other by the highest: a) Life rating specified in Paragraph 2.3 if both firecells are under common ownership, or b) Property rating specified in Paragraph 2.3 if both firecells are under different ownership.
+(58.07196192304922, 'if( adjoin( firecells)), then( obligation( and( in between( fire separation, firecells), if( equal( firecells. ownership, common)), then( define( max( firecells. life rating), x0)), if( equal( firecells. ownership, different)), then( define( max( firecells. property rating), x0))))))')
+Target: if( adjoin( firecells)), then( obligation( and( in between( fire separation, firecells), max( firecells. rating), or( and( define( max( firecells. life rating), x0), as per( firecells. life rating, nzbc cas2 2.3.0), is( fire separation. fire resistance rating, x0), equal( firecells. owner)), and( define( max( firecells. property rating), x0), as per( property rating, nzbc cas2 2.3.0), is( fire separation. fire resistance rating, x0), not( equal( firecells. owner)))))))
+
+Source: G12AS1 6.3.2 Open vented storage water heaters shall have a vent pipe complying with Paragraph 6.8.
+(79.09142641188147, 'if( is( storage water heater. type, open vented)), then( obligation( comply with( storage water heater. vent pipe, nzbc g12as1 6.8)))')
+Target: if( is( storage water heater. type, open vented)), then( obligation( and( has( storage water heater, ventilation pipe), comply with( ventilation pipe, nzbc g12as1 6.8))))
+
+Source: G12AS1 3.6.2 Manufacture; Backflow prevention devices shall be manufactured as follows: a) Reduced pressure zone devices to AS/NZS 2845.1 Section 12 (see Figure 2 (a)).
+(93.23164918970448, 'if( is( backflow prevention device, reduced pressure zone device)), then( obligation( comply with( backflow prevention device, nzs 2845 1 12)))')
+Target: if( is( backflow prevention device, reduced pressure zone device)), then( obligation( comply with( backflow prevention device. manufacturing, nzs 2845 1 12)))
+
+Source: G12AS1 6.9.1 NZS 4603 is an acceptable solution for open vented low pressure storage water heaters, but may exceed the performance criteria of NZBC G12.
+(74.28512564875429, 'if( is( storage water heater. type, open vented), then( permission( comply with( storage water heater, and( nzs 4603, not( comply with( storage water heater, nzbc g12))))))')
+Target: if( is( storage water heater. type, and( open vented, low pressure))), then( permission( comply with( storage water heater, nzs 4603)))
+
+Source: G12AS1 6.10.1 NZS 4607 is an acceptable solution for unvented (valve vented) storage water heaters, but may exceed the performance criteria of NZBC G12.
+(70.61433117947728, 'if( is( water heater. type, unvented)), then( permission( comply with( water heater, nzs 4607)))')
+Target: if( is( storage water heater. type, or( unvented, valve vented))), then( permission( comply with( storage water heater, nzs 4607)))
+
+Source: E1AS1 3.7.4 Inspection chambers or access chambers (see Figures 11 and 12) shall be provided where changes in both gradient and direction occur and where either is greater than 22.5°.
+(48.28574909059927, 'if( or( greater than( drain. gradient change, 22.5 deg), greater than( drain. direction change, 22.5 deg))), then( obligation( has( drain, or( inspection chamber, access chamber))))')
+Target: if( and( include( drain, and( change in direction, change in gradient)), define( change in gradient. location, x0), equal( change in direction. location, x0), or( greater than( change in direction, 22.5 deg), greater than( change in gradient, 22.5 deg)))), then( obligation( and( has( drain, access point), is( access point. type, or( inspection chamber, access chamber)), is( access point. location, x0))))
+
+Source: G12AS1 Pipes penetrating concrete or masonry elements shall be either wrapped with a flexible material, or passed through a sleeve or duct, to permit free movement for expansion and contraction.
+(62.095862501683705, 'if( and( is( penetration. material, or( concrete, masonry)), has( penetration, pipe)), then( obligation( or( and( has( pipe, wrapping), is( wrapping. material, flexible)), and( has( pipe, sleeve), or( is( sleeve. type, sleeve), is( sleeve. type, duct))))))')
+Target: if( and( into( pipe, element), is( element. material, or( concrete, masonry)))), then( obligation( or( and( has( pipe, wrapping), is( wrapping. material, flexible)), through( pipe, and( sleeve, duct)))))
+
+Source: E1AS1 2.0.1 Suspended floors and slabs on ground shall be at least 150 mm above the finished level of the surrounding ground immediately adjacent to the building.
+(91.42069437475786, "if( or( is( floor. type, suspended), on( slab, ground))), then( obligation( and( adjacent( building, ground), define( ground. level, x0), greater than equal( floor. elevation, 'x0 + 150 mm'), greater than equal( slab. elevation, 'x0 + 150 mm'))))")
+Target: if( or( is( floor. type, suspended), on( slab, ground))), then( obligation( and( adjacent( ground, building), define( ground. elevation, x0), greater than equal( floor. elevation, 'x0 + 150 mm'), greater than equal( slab. elevation, 'x0 + 150 mm'))))
+
+Source: E1AS1 Drains shall be capable of handling the rainfall during a storm. No drain shall have an internal diameter of less than 85 mm.
+(68.82532669054235, 'if( is( drain, any)), then( obligation( and( greater than equal( drain. diameter, 85 mm), as per( drain. capacity, rainfall during a storm))))')
+Target: if( exist( drain)), then( obligation( and( for( drain, storm water), greater than equal( drain. internal diameter, 85 mm))))
+
+Source: G12AS1 6.7.1 Relief valve drains (see Figures 12 and 13) shall be fitted to: a) Temperature/pressure relief valves, Pressure relief valves, and c) Expansion control valves.
+(72.17645721430365, 'if( or( is( valve. type, temperature/pressure relief), is( valve. type, pressure relief), is( valve. type, expansion control))), then( obligation( has( valve, relief valve drain), as per( relief valve drain, and( nzbc g12as1 f12, nzbc g12as1 f13)))))')
+Target: if( is( valve. type, or( temperature pressure relief, pressure relief, expansion control))), then( obligation( has( valve, relief valve drain)))
+
+Source: E1AS1 Acceptable fill materials shown in Figure 13 are: Selected compacted fill of any fine-grained soil or granular material which is free from topsoil and rubbish and has a maximum particle size of 20 mm.
+(71.11510987556716, 'if( is( fill material, selected compacted fill)), then( obligation( and( is( selected compacted fill, and( fine grained soil, granular material)), not( include( selected compacted fill, or( topsoil, rubbish))), less than equal( selected compacted fill. particle size, 20 mm))))')
+Target: if( and( is( fill material, bedding material), is( fill material. type, compacted))), then( obligation( and( is( fill material, or( fine grained soil, granular)), not( include( fill material, and( topsoil, rubbish))), less than equal( fill material. particle size, 20 mm))))
+
+Source: B1AS1 The earthquake zone factor > 0.6 shall apply to the Canterbury earthquake region.
+(35.89012956419317, 'if( is( region, canterbury earthquake)), then( is( earthquake zone factor, greater than( 0.6)))')
+Target: if( exist( canterbury earth quake region)), then( obligation( greater than( canterbury earth quake region. earth quake zone factor, 0.6)))
+
+Source: B1AS1 Structure Design; Interlinking rails are not required for a heat-strengthened or toughened laminated safety glass barrier that: has two or three edges supported by structural sealant joints or continuous clamps, and will, when both panes of the laminate are fractured, resist a 0.2 kN concentrated load and not deflect more than 250 mm (see note 2).
+(80.21617390874518, 'if( and( is( safety barrier. material, glass), is( glass. type, laminated), is( glass, or( heat strengthened, toughened)), has( glass, or( structural sealant joint, continuous clamp), for( edge, supported), is( edge. type, or( two edges, three edges))), is( safety barrier. panes, and( laminate, fractured)), against( panes. resistance, concentrated load), less than equal( concentrated load, 0.2 kN), is( resistance. type, concentrated load), less than equal( panes. deflection, 250 mm))), then( permission( not( is( safety barrier. rail, interlinked))))')
+Target: if( and( is( safety barrier. material, glass), is( glass. type, laminated), is( glass, or( heat strengthened, toughened)), equal( count( safety barrier. edge), or( 2, 3)), is( edge. support, or( sealant joint, continuous clamp)), is( safety barrier. panes, and( laminate, fractured)), against( panes. resistance, concentrated load), less than equal( concentrated load, 0.2 kN), is( resistance. type, concentrated load), less than equal( panes. deflection, 250 mm))), then( permission( not( is( safety barrier. rail, interlinked))))
+
+Source: E2AS1 4.3.10 Bituminous flashings; Bituminous flashings shall only be used in accordance with Table 20.
+(93.33333333333333, 'if( is( flashing. material, bituminous)), then( obligation( as per( flashing, nzbc e2as1 t20)))')
+Target: if( is( flashing. material, bituminous)), then( obligation( as per( flashing. application, nzbc e2as1 t20)))
+
+Source: E2AS1 Cladding systems shall meet the requirements of NZBC E2.2 to E2.3.7.
+(64.12125227762134, 'if( include( building. envelope, cladding system)), then( obligation( comply with( cladding system, nzbc e2 2 to nzbc e2 3.7)))')
+Target: if( exist( cladding system)), then( obligation( comply with( cladding system, nzbc e2 2 to nzbc e2 3.7)))
+
+Source: B1AS1 NZS 4223.3 Glass design for these types shall comply with the following tables (see note 1): Table 16 - Structural balustrade – two-edge support;.
+(100.0, 'if( and( is( structure, balustrade), is( balustrade. design, two edge support))), then( obligation( comply with( balustrade. design, nzs 4223 3 t16)))')
+Target: if( and( is( structure, balustrade), is( balustrade. design, two edge support))), then( obligation( comply with( balustrade. design, nzs 4223 3 t16)))
+
+Source: E2AS1 7.1.1 Slatted decks; The level of the upper surface of the slatted deck: May be at the same level as the threshold for non-cantilevered decks that are formed as shown in Figure 14(c).
+(69.00382599990944, 'if( is( deck. type, slatted)), then( permission( and( define( deck. level, x0), equal( deck. level, threshold. elevation), is( threshold. type, non-cantilevered deck), as per( threshold, nzbc e2as1 f14.c))))')
+Target: if( and( is( deck, slatted), not( is( deck, cantilevered)), as per( deck, nzbc e2as1 f14.c))), then( permission( and( define( deck. threshold level, x0), equal( deck. upper surface level, x1))))
+
+Source: E2AS1 8.2.1.1 Tile profiles; Type II: Single profile tiles having one water- course depth of a minimum of 25 mm.
+(78.89779875144714, 'if( is( tile. type, single profile)), then( greater than equal( tile. watercourse. depth, 25 mm))')
+Target: if( is( tile. type, single profile)), then( and( equal( count( tile. watercourse), 1), greater than equal( watercourse. depth, 25 mm)))
+
+Source: E2AS1 Roof cladding; Where required in AS 2050 and Table 20, underlay shall comply with Table 23.
+(65.68645373696103, 'if( has( roof cladding, underlay), and( apply to( underlay, as 2050)), then( obligation( comply with( underlay, nzbc e2as1 t23))))')
+Target: if( and( requires( roof cladding, underlay), as per( underlay, and( as 2050, nzbc e2as1 t20)))), then( obligation( comply with( underlay, nzbc e2as1 t23)))
+
+Source: E2AS1 Handrails; Fixing of posts for handrails into membrane roofs or decks is not covered by this Acceptable Solution.
+(56.77017478633887, 'if( and( is( handrail, post), towards( post. fixing, or( membrane roof, deck)))), then( not( apply to( nzbc e2as1, post. fixing)))')
+Target: if( and( for( membrane, or( roof, deck)), into( post. fixing, membrane), for( post, handrail))), then( not( apply to( nzbc e2as1, fixing)))
+
+Source: E2AS1 8.4.13 Stopends; The top ends of profiled metal roof cladding shall have stopends as shown in Figure 49 for trapezoidal and trough profile metal roof cladding, where: a) The roof pitch is less than 25°, or b) The building is in a High/Very High/Extra High wind zone.
+(83.61149666278187, 'if( is( roof cladding. type, profiled metal), then( obligation( and( has( roof cladding. top end, stopend), as per( stopend, nzbc e2as1 f49), or( less than( roof. pitch, 25 deg), is( building. wind zone, or( high, very high, extra high))))))')
+Target: if( and( is( roof cladding. type, profiled metal), is( roof cladding. profile, or( trapezoidal, trough)), or( less than( roof. pitch, 25 deg), is( building. wind zone, or( high, very high, extra high))))), then( obligation( and( has( cladding. top end, stopend), as per( stopend, nzbc e2as1 f49))))
+
+Source: E2AS1 9.1.3.5 Bottom of wall claddings for timber floor framing; Suspended timber floors shall meet the requirements of NZS 3604. Clearances from paved and unpaved surfaces to the wall framing shall be in accordance with NZS 3604, and Table 18.
+(49.535483879790704, 'if( and( is( floor. type, suspended timber), comply with( floor, nzs 3604))), then( obligation( and( has( wall cladding. bottom, clearance), towards( clearance, surface), comply with( clearance, and( nzbc e2as1 t18, nzs 3604)))))')
+Target: if( and( adjacent( floor, wall cladding), is( floor, suspended), is( floor. material, timber))), then( obligation( and( comply with( floor, nzs 3604), towards( wall cladding. clearance, surface), is( surface, or( paved, unpaved)), as per( wall cladding. clearance, and( nzs 3604, nzbc e2as1 t18)))))
+
+Source: G12AS2 4.2.1 Solar collectors must face within +/- 90 degrees of geographic north (ie between east and west) to satisfy the requirements of NZBC Clause H1.3.4(a).
+(78.1017870931749, "if( exist( solar collector)), then( obligation( within( solar collector. facing, '+/- 90 degreesOfGeographicNorth')))")
+Target: if( exist( solar collector)), then( obligation( within( solar collector. orientation, ' +/- 90 degreesOfGeographicalNorth')))
+
+Source: G12AS2 5.0.3 Fixings used for the installation of a solar water heater must meet the requirements described in Paragraphs 2.1.1, 2.1.2, 2.1.3 and 2.1.4.
+(97.05760199354654, 'if( has( solar water heater. installation, fixing)), then( obligation( and( comply with( fixing, and( nzbc g12as2 2.1.1, nzbc g12as2 2.1.2, nzbc g12as2 2.1.3, nzbc g12as2 2.1.4)))))')
+Target: if( has( solar water heater. installation, fixing)), then( obligation( comply with( fixing, and( nzbc g12as2 2.1.1, nzbc g12as2 2.1.2, nzbc g12as2 2.1.3, nzbc g12as2 2.1.4))))
+
+Source: E2AS1 Parapets shall comply with Paragraph 6.0.
+(100.0, 'if( exist( parapet)), then( obligation( comply with( parapet, nzbc e2as1 6.0)))')
+Target: if( exist( parapet)), then( obligation( comply with( parapet, nzbc e2as1 6.0)))
+
+Source: G12AS2 3.1.2 Tanks installed as part of a pumped solar water heater where the tank is separately mounted from the collector must comply with the minimum tank insulation requirements of AS/NZS 4692.2.
+(51.66218471351404, 'if( and( is( water heater. type, pumped solar), has( water heater, tank), not( connect( water heater. tank, water heater. collector))), then( obligation( comply with( water heater. tank insulation, as/nzs 4692.2))))')
+Target: if( and( part of( tank, solar water heater), is( solar water heater. type, pumped), away from( tank, collector))), then( obligation( comply with( tank. insulation, nzs 4692 2)))
+
+Source: G12AS2 Roof Framing 6.2.7 The centre of all fixings must be no closer than 10 fixing diameters from the end of a piece of timber.
+(66.13611227120542, "if( has( roof framing, fixing)), then( obligation( and( define( fixing. centre, x0), define( timber. length, x1), define( fixing. diameter, x2), less than equal( x0, 'x1 - 10 * x2'))))")
+Target: if( has( timber section, fixing)), then( obligation( and( define( fixing. centre, x0), define( timber section. end, x1), in between( distance, and( x0, x1)), define( fixing. diameter, x2), greater than equal( distance, '10 * x2'))))
+
+Source: G12AS2 6.4.2 Solar collectors mounted parallel to the roof that are elevated up to 50 mm above the roof cladding must be supported by: a) underlying purlins conforming to Paragraph 6.4.1 (a) or (b), or b) underlying rafters or trusses with connections conforming with Paragraphs 6.4.1 (a) or (c), or c) collector support rails conforming to Paragraph 6.5.
+(58.697898331474185, "if( and( is( solar collector. orientation, parallel), above( solar collector. elevation, roof cladding), less than equal( solar collector. elevation, 'roof cladding + 50 mm'))), then( obligation( or( and( has( solar collector, support), is( support. type, purlin), comply with( purlin, or( nzbc g12as2 6.4.1a, nzbc g12as2 6.4.1b))), and( has( solar collector, support), is( support. type, rafter or truss), comply with( support, or( nzbc g12as2 6.4.1a, nzbc g12as2 6.4.1c))), and( has( solar collector, support), is( support. type, collector support rail), comply with( collector support rail, nzbc g12as2 6.5)))))")
+Target: if( and( is( solar collector. orientation, parallel), towards( solar collector. orientation, roof), above( solar collector. elevation, roof cladding), less than equal( solar collector. elevation, 50 mm))), then( obligation( or( and( is( solar collector. support, purlin), below( purlin, solar collector), comply with( purlin, or( nzbc g12as2 6.4.1.a, nzbc g12as2 6.4.1.b))), and( is( solar collector. support, rafter), below( rafter, solar collector), comply with( rafter. connection, or( nzbc g12as2 6.4.1.a, nzbc g12as2 6.4.1.c))), and( is( solar collector. support, truss), below( truss, solar collector), comply with( truss. connection, or( nzbc g12as2 6.4.1.a, nzbc g12as2 6.4.1.c))), and( is( solar collector. support, support rail), comply with( support rail, nzbc g12as2 6.5)))))
+
+Source: G13AS1 5.1.1 Discharge pipes shall be vented where required by Table 5.
+(70.66666666666667, 'if( exist( discharge pipe)), then( obligation( comply with( discharge pipe. venting, nzbc g13as1 t5)))')
+Target: if( exist( discharge pipe)), then( obligation( as per( discharge pipe. ventilation, nzbc g13as1 t5)))
+
+Source: G13AS1 5.8.2 Air admittance valves shall be manufactured to ASSE 1050, ASSE 1051, EN 12380 or AS/NZS 4936.
+(85.10886418149774, 'if( is( air admittance valve, exist)), then( obligation( comply with( air admittance valve, or( asse 1050, asse 1051, en 12380, nzs 4936))))')
+Target: if( exist( air admittance valve)), then( obligation( comply with( air admittance valve. manufacturing, or( asse 1050, asse 1051, en 12380, nzs 4936))))
+
+Source: G13AS1 3.1.2 Water traps shall be: a) Removable, b) Able to be dismantled, or c) Fitted with a cleaning eye.
+(84.9401450504278, 'if( exist( water trap)), then( obligation( or( is( water trap. type, removable), is( water trap. type, dismantlable), has( water trap, cleaning eye))))')
+Target: if( exist( water trap)), then( obligation( or( is( water trap, or( removable, dismantleable)), has( water trap, cleaning eye))))
+
+Source: G13AS1 Individual floor waste pipes connected to a floor waste stack need not be vented (see Figure 3).
+(37.107752416203994, 'if( and( has( floor waste, pipes), is( connect( pipes), floor waste stack))), then( permission( not( has( pipes, ventilation))))')
+Target: if( within( pipe, floor waste stack)), then( permission( not( has( pipe, ventilation))))
+
+Source: G13AS2 5.1.1 Rigid pipes shall have flexible joints to resist damage from differential settlement.
+(73.7466307277628, 'if( is( pipe. type, rigid)), then( obligation( has( pipe, joint), is( joint. flexibility, flexible), towards( joint. resistance, differential settlement)))')
+Target: if( is( pipe, rigid)), then( obligation( and( has( pipe, joint), is( joint, flexible))))
+
+Source: G13AS2 5.9.3 Access points may be located in a space containing a soil fixture.
+(89.117199391172, 'if( exist( access point)), then( permission( within( access point. location, space), has( space, soil fixture)))')
+Target: if( exist( access point)), then( permission( and( within( access point. location, space), include( space, soil fixture))))
+
+Source: G13AS2 5.10.1 Where a drain or part of a drain is no longer required, it shall be disconnected from the foul water drainage system at the junction with the live drain or at the property boundary.
+(41.46487627606222, 'if( exist( drain)), then( obligation( or( is( drain, disconnected), towards( drain. disconnection, or( live drain, property boundary)))))')
+Target: if( or( not( is( drain, required)), not( is( drain. part, required)))), then( obligation( or( disconnect( drain, or( live drain junction, property boundary)), disconnect( drain. part, or( live drain junction, property boundary)))))
+
+Source: G13AS2 3.5.1 Drains shall: a) Be laid at an even grade, and b) Have no obstructions to flow.
+(76.2507689153168, 'if( exist( drain)), then( obligation( and( is( drain. grade, even), not( exist( obstruction, towards( obstruction, flow))))))')
+Target: if( exist( drain)), then( obligation( and( is( drain. grade, even), not( has( drain. flow, obstruction)))))
+
+Source: G15AS1 4.0.1 Where waste chutes with side-entry hoppers (see Figure 2) are used as an alternative to common storage areas, the chute shall: a) Have a minimum internal diameter of 450 mm, b) Be self-cleaning, vertical and have smooth joints, c) Be vented at the top above the roof line, and at the bottom above the container, and d) Terminate centrally over a suitable container located in a room complying with Paragraphs 3.0.1 to 3.0.9.
+(60.25295824890355, 'if( is( waste chute. type, side-entry), then( obligation( and( greater than equal( waste chute. diameter, 450 mm), is( waste chute. cleaning, self), is( waste chute. orientation, vertical), has( waste chute, smooth joints), has( waste chute, ventilation), towards( ventilation. location, and( top, roof line)), towards( ventilation. location, and( bottom, container)), has( waste chute, termination), towards( termination. location, and( central, container)), is( container. location, room), comply with( room, and( nzbc g15as1 3.0.1, nzbc g15as1 3.0.9))))))')
+Target: if( and( has( waste chute, site entry hopper), not( exist( waste storage area)), is( waste storage area. type, common))), then( obligation( and( greater than equal( waste chute. internal diameter, 450 mm), is( waste chute, self cleaning), is( waste chute, vertical), is( waste chute. joint, smooth), has( waste chute. top, ventilation), above( ventilation, roof line), has( waste chute. bottom, ventilation), above( ventilation, container), is( waste chute. termination point, central), above( waste chute. termination point, container), is( container. location, space), comply with( space, nzbc g15as1 3.0.1 to nzbc g15as1 3.0.9))))
+
+Source: B1AS3 1.1.1 Type; The acceptable solutions described in this document are for chimneys built of brickwork, concrete or precast pumice concrete, that are connected to timber frame or masonry buildings complying with NZS 3604 or NZS 4229.
+(81.87019472865887, 'if( is( chimney. material, or( brickwork, concrete, precast pumice concrete)), and( is( building, or( timber frame, masonry)), comply with( building, or( nzs 3604, nzs 4229))), then( obligation( is( chimney. type, acceptable solution)))')
+Target: if( and( is( chimney. material, or( brickwork, concrete, precast pumice concrete)), connect( chimney, building), is( building. material, or( timber frame, masonry)), comply with( building, or( nzs 3604, nzs 4229)))), then( apply to( nzbc b1as3, chimney))
+
+Source: G15AS1 3.0.3 Walls in spaces where storage bins are likely to receive food wastes and are subject to spillage shall be constructed of concrete, galvanised sheet steel, vinyl or similar material.
+(62.34177774903479, 'if( and( is( wall. space, storage bin), include( wall. risk group, food waste), include( wall. task, spillage)), then( obligation( is( wall. material, or( concrete, galvanised sheet steel, vinyl, similar material))))')
+Target: if( and( has( space, and( wall, storage bin)), into( food waste, storage bin), has( storage bin, spillage))), then( obligation( or( is( wall. material, or( concrete, galvanised steel sheet, vinyl)), similar to( wall. material, or( concrete, galvanised steel sheet, vinyl)))))
+
+Source: G15AS1 Waste Storage Area 3.0.6 opening windows shall be screened to prevent entry by insects and other vermin.
+(67.09051134809954, 'if( has( waste storage area, opening window)), then( obligation( screened from( opening window, and( insect, vermin))))')
+Target: if( and( has( waste storage area, window), is( window, openable))), then( obligation( screened from( window, vermin)))
+
+Source: G15AS1 3.0.7 A water supply tap, complying with NZBC G12, shall be provided for washing down common waste storage areas.
+(98.73417721518987, 'if( is( waste storage area. type, common)), then( obligation( has( waste storage area, water supply tap), comply with( water supply tap, nzbc g12)))')
+Target: if( is( waste storage area. type, common)), then( obligation( and( has( waste storage area, water supply tap), comply with( water supply tap, nzbc g12))))
+
+Source: B1AS3 1.9.1 The bracing described in Paragraphs 1.9.2 to 1.9.6 shall be provided in those buildings where one or more of the following apply: a) The area of the room containing the chimney exceeds 24 m2, c) The floor area on any level of the building, for a given chimney type (see Table 2), is less than: i) 50 m2 for chimney Type 1, ii) 75 m2 for chimney Types 2, 3 and 4, iii) 150 m2 for chimney Types 5, 6 and 7.
+(39.87143098826324, 'if( and( is( building, or( room, floor)), has( building, chimney), or( greater than( room. area, 24 m2), less than( floor. area, and( or( is( chimney. type, 1), is( chimney. type, 2), is( chimney. type, 3), is( chimney. type, 4)), or( and( is( chimney. type, 5), less than( floor. area, 150 m2)), and( is( chimney. type, 6), less than( floor. area, 150 m2)), and( is( chimney. type, 7), less than( floor. area, 150 m2))))))), then( obligation( for each( building, bracing), comply with( bracing, nzbc b1as3 1.9.2 to 1.9.6))))')
+Target: if( or( and( include( building. space, chimney), greater than( space. area, 24 m2)), and( less than( building storey. floor area, 50 m2), is( chimney. type, type 1)), and( less than( building storey. floor area, 75 m2), is( chimney. type, or( type 2, type 3, type 4))), and( less than( building storey. floor area, 150 m2), is( chimney. type, or( type 5, type 6, type 7))))), then( obligation( and( has( building, bracing), as per( bracing, nzbc b1as3 1.9.2 to nzbc b1as3 1.9.6))))
+
+Source: B1AS3 1.9.3 The number of bracing units to be provided for each chimney connection (see Paragraph 1.9.4) is given in Table 2.
+(47.451540860918904, 'if( has( building, chimney)), then( obligation( and( define( chimney. connection, x0), as per( count( bracing unit), and( x0, nzbc b1as3 t2)), as per( bracing unit, nzbc b1as3 1.9.4))))')
+Target: if( exist( chimney)), then( obligation( loop( for each( chimney. connection), as per( count( bracing. unit), nzbc b1as3 t2))))
+
+Source: B1AS3 1.9.4 A chimney shall be considered as connected to the building when: a) At roof level: it is held either by a roof bracket or by a roof tie.
+(73.15922519179398, 'if( is( chimney. elevation, roof level), or( is( chimney. fixing, roof bracket), is( chimney. fixing, roof tie))), then( connect( chimney, building))')
+Target: if( and( has( chimney, fixing), is( fixing. type, or( roof bracket, roof tie)), is( fixing. elevation, roof level))), then( connect( chimney, building))
+
+Source: B1AS3 Fixing Ties; The ties shall be located at no less than 320 mm centres for stacks up to 600 mm wide.
+(89.06272223012375, 'if( and( is( tie. type, fixing), less than equal( stack. width, 600 mm))), then( obligation( greater than equal( tie. location, 320 mmCentres)))')
+Target: if( and( is( tie. type, fixing), for( tie, stack), less than equal( stack. width, 600 mm))), then( obligation( greater than equal( tie. location, 320 mmCentres)))
+
+Source: G14VM1 1.4.1 Disposal systems shall be located: To ensure that spillage from storage tanks or ponds can be safely contained.
+(100.0, 'if( exist( disposal system)), then( obligation( has( disposal system. location, spillage containment)))')
+Target: if( exist( disposal system)), then( obligation( has( disposal system. location, spillage containment)))
+
+Source: G14VM1 1.4.1 Collection facilities shall be located: In areas with sufficient access for cleaning, clearing of blockages, and maintenance.
+(100.0, 'if( exist( collection facility)), then( obligation( and( has( collection facility. location, access), for( access, or( cleaning, blockage clearing, maintenance)))))')
+Target: if( exist( collection facility)), then( obligation( and( has( collection facility. location, access), for( access, or( cleaning, blockage clearing, maintenance)))))
+
+Source: B1AS1 Structure Design 8.0 Small Chimneys; See Acceptable Solution B1/AS3.
+(73.89075481704084, 'if( and( is( structure, chimney), is( chimney. size, small))), then( apply to( nzbc b1as3, structure))')
+Target: if( and( is( structure, chimney), is( chimney. size, small))), then( as per( chimney. design, nzbc b1as3))
+
+Source: G14VM1 2.0.1 Where the network utility operator accepts the discharge of industrial liquid waste to a sewer, the waste shall be conveyed in a plumbing and drainage disposal system complying with NZBC G13 Foul Water.
+(74.89387783049511, 'if( and( for( disposal system, industrial liquid waste), is( disposal system. disposal method, discharge), accept( network utility operator, discharge), into( discharge, sewer))), then( obligation( comply with( disposal system, nzbc g13 foul water)))')
+Target: if( and( accept( network utility operator, discharge), is( discharge. type, industrial liquid waste), into( discharge, sewer))), then( obligation( and( within( industrial liquid waste, disposal system), for( disposal system, and( plumbing, drainage)), comply with( disposal system, nzbc g13))))
+
+Source: G14VM1 2.1.1 Screens, grit chambers, grease traps or similar appropriate equipment should be installed at the head of piping systems if suspended solids or material within the liquid waste might cause blockage of the piping system.
+(27.558773917219387, 'if( exist( piping system)), then( obligation( and( has( piping system, equipment), is( equipment. type, or( screen, grit chamber, grease trap)), towards( equipment, head), for( material, piping system), is( material. type, or( suspended solid, waste)), requires( equipment, prevent( material, blockage)))))')
+Target: if( and( cause( liquid waste, blockage), within( blockage, piping system))), then( obligation( or( has( piping system. head, or( screen, grit chamber, grease trap)), similar to( piping system. head, or( screen, grit chamber, grease trap)))))
+
+Source: G14VM1 2.1.2 Wherever possible, piping systems shall convey industrial liquid waste using gravity flow.
+(70.7996472144642, 'if( exist( piping system)), then( obligation( and( is( piping system. method, gravity flow), towards( piping system, industrial liquid waste))))')
+Target: if( and( for( piping system, industrial liquid waste), is( piping system. gravity flow, possible))), then( obligation( is( piping system. method, gravity flow)))
+
+Source: E2AS1 Galvanized steel flashings shall: a) have a BMT of 0.55 mm minimum b) be grade G550, or G300 for rolled or crimped flashings c) be selected for corrosion protection according to the intended exposure zone as shown in Table 20.
+(91.75678006624736, 'if( is( flashing. material, galvanized steel)), then( obligation( and( greater than equal( flashing. base metal thickness, 0.55 mm), or( equal( flashing. grade, g550), and( equal( flashing. grade, g300), is( flashing. type, or( rolled, crimped)))), as per( flashing. corrosion protection, intended exposure zone), as per( intended exposure zone, nzbc e2as1 t20))))')
+Target: if( and( is( flashing. material, steel), is( steel. type, galvanised))), then( obligation( and( greater than equal( flashing. base metal thickness, 0.55 mm), or( equal( flashing. grade, g550), and( equal( flashing. grade, g300), is( flashing. type, or( rolled, crimped)))), as per( flashing. corrosion protection, intended exposure zone), as per( intended exposure zone, nzbc e2as1 t20))))
+
+Source: E2AS1 Buildings with drained cavities and acoustic requirements, as specified in NZBC Clause G6, are outside the scope of this Acceptable Solution.
+(92.73574606518436, 'if( and( has( building, and( drained cavity, acoustic requirement)), is( acoustic requirement, nzbc g6))), then( not( apply to( nzbc e2as1, building)))')
+Target: if( and( has( building, and( drained cavity, acoustic requirement)), as per( acoustic requirement, nzbc g6))), then( not( apply to( nzbc e2as1, building)))
+
+Source: E2AS1 Joins of metal flashings shall have the following features: Lap joins on other metal flashings (i.e. not rules 4.5.2.0.2.e.1 and 4.5.2.0.2.f.1) shall be sealed using a neutral cure silicone sealant in conjunction with mechanical fasteners. The sealant shall comply with: a) Type F, Class 20LM or 25LM of ISO 11600, or b) low modulus Type II Class A of Federal Specification TT-S-00230C.
+(63.14019486857123, 'if( and( is( flashing. material, metal), has( flashing. join, lap), not( or( is( join, nzbc e2as1 4.5.2.0.2.e.1), is( join, nzbc e2as1 4.5.2.0.2.f.1)))), then( obligation( and( has( join, sealant), adjoin( sealant, mechanical fastener), is( sealant. type, neutral cure silicone), comply with( sealant, or( iso 11600 type f, iso 11600 class 20lm, iso 11600 class 25lm, tts 00230c low modulus type ii class a)))))')
+Target: if( and( is( flashing. material, metal), has( flashing. join, lap), not( apply to( nzbc e2as1 4.5.2.0.2.e.1, flashing)), not( apply to( nzbc e2as1 4.5.2.0.2.f.1, flashing)))), then( obligation( and( by( lap. seal, and( sealant, mechanical fastener)), is( sealant. type, neutral cure silicone), comply with( sealant, or( iso 11600 type f class 20lm, iso 11600 type f class 25lm, tts 00230c low modulus type ii class a)))))
+
+Source: E2AS1 4.6 Flashing overlaps and upstands; Overlaps and upstands to flashings shall be as specified in this paragraph and Table 7.
+(63.10776577596467, 'if( exist( flashing)), then( obligation( and( as per( flashing. overlap, and( nzbc e2as1 4.6, nzbc e2as1 t7)), as per( flashing. upstand, and( nzbc e2as1 4.6, nzbc e2as1 t7)))))')
+Target: if( has( flashing, or( lap, upstand))), then( obligation( and( as per( lap, and( nzbc e2as1 4.6, nzbc e2as1 t7)), as per( upstand, and( nzbc e2as1 4.6, nzbc e2as1 t7)))))
+
+Source: E2AS1 4.0 Flashings 4.6.1.6 Window and door heads; Overlap cover of cladding to the flashing upstand and clearance from the bottom of the cladding to top of head flashing slope shall be in accordance with Table 7.
+(97.45264532984977, 'if( for( flashing, or( window head, door head))), then( obligation( and( has( flashing, upstand), above( flashing, cladding), in between( overlap cover, and( cladding, upstand)), has( cladding, bottom), has( flashing. head, slope), has( slope, top), in between( clearance, and( bottom, top)), as per( overlap cover, nzbc e2as1 t7), as per( clearance, nzbc e2as1 t7))))')
+Target: if( for( flashing. type, or( window head, door head))), then( obligation( and( has( flashing, upstand), above( flashing, cladding), in between( overlap cover, and( cladding, upstand)), has( cladding, bottom), has( flashing. head, slope), has( slope, top), in between( clearance, and( bottom, top)), as per( overlap cover, nzbc e2as1 t7), as per( clearance, nzbc e2as1 t7))))
+
+Source: E2AS1 4.0 Flashings 4.6.1.3 Change in metal roof pitches; a) There shall be a minimum effective lap under roof cladding in accordance with Table 7, with a hem at upper edge.
+(46.760273741208806, 'if( is( flashing. type, change in pitch)), then( obligation( and( has( flashing, lap), greater than equal( lap. size, and( nzbc e2as1 t7, hem)), has( lap, hem), towards( hem, lap), above( hem, roof cladding))))')
+Target: if( and( has( metal roofing. pitch, change), for( flashing, change))), then( obligation( and( below( lap, cladding), is( lap, minimum effective), as per( lap, nzbc e2as1 t7), is( lap. edge, upper), has( lap. edge, hem))))
+
+Source: E2AS1 8.4 Profiled Metal Roof Cladding; Fixings shall: a) Be fixed through crests, b) Penetrate purlins by a minimum of 40 mm for nail fixings and 30 mm for screw fixings, c) Include sealing washers of: i) neoprene (having a carbon black content of 15% or less by weight).
+(79.70295841252208, 'if( is( roof cladding. type, profiled metal), has( roof cladding, fixing), and( is( fixing. type, or( nail, screw)), greater than equal( fixing. penetration, or( 40 mm, 30 mm))), then( obligation( and( include( fixing, sealing washer), is( sealing washer. type, neoprene), has( neoprene, carbon black content), less than equal( neoprene. carbon black content, 15 percent), by( neoprene, weight))))')
+Target: if( and( is( roof cladding. type, profiled metal), has( roof cladding, fixing))), then( obligation( and( has( roof cladding, crest), through( fixing, crest), into( fixing. penetration, purlin), or( and( is( fixing. type, nail), greater than equal( fixing. penetration, 40 mm)), and( is( fixing. type, screw), greater than equal( fixing. penetration, 30 mm))), include( fixing, sealing washer), is( sealing washer. type, neoprene), less than equal( sealing washer. carbon black content, 15 percent))))
+
+Source: E2AS1 9.1.3.3 Bottom of wall claddings for concrete ground slabs (except masonry veneer); At concrete slab level, the base of the cladding system shall be as shown in Table 18, and: a) Finish a minimum of: i) 100 mm above a paved surface, or ii) 175 mm above finished unpaved surface, b) Overlap the concrete slab by 50 mm, and c) Be offset horizontally by a minimum of 6 mm for direct fixed claddings to prevent capillary action.
+(68.48219085879073, 'if( and( adjoin( wall cladding, concrete slab), not( is( wall cladding. type, masonry veneer))), then( obligation( and( as per( wall cladding. bottom, nzbc e2as1 t18), towards( wall cladding. finish, surface), or( and( greater than equal( wall cladding. finish, 100 mm), is( surface. type, paved)), and( greater than equal( wall cladding. finish, 175 mm), is( surface. type, unpaved))), has( wall cladding. bottom, lap), towards( lap, slab), equal( lap. size, 50 mm), is( wall cladding. type, direct fixed), has( wall cladding. bottom, offset), is( offset, horizontal), towards( offset, slab), greater than equal( offset. size, 6 mm))))')
+Target: if( and( not( is( wall cladding. system, masonry veneer)), adjoin( slab, wall cladding), is( slab. type, ground), is( slab. material, concrete))), then( obligation( and( comply with( wall cladding. bottom, nzbc e2as1 t18), or( and( adjoin( surface, wall cladding), is( surface. type, paved), define( surface. elevation, x0), greater than equal( wall cladding. bottom, 'x0 + 100 mm')), and( adjoin( surface, wall cladding), not( is( surface. type, paved)), define( surface. elevation, x0), greater than equal( wall cladding. bottom, 'x0 + 175 mm'))), has( wall cladding. bottom, lap), towards( lap, slab), equal( lap. size, 50 mm), or( and( has( wall cladding. bottom, offset), is( offset, horizontal), greater than equal( offset. size, 6 mm), is( wall cladding. type, direct fixed), prevent( offset, capillary action)), not( is( wall cladding. type, direct fixed))))))
+
+Source: G13AS2 3.3.1 All gully traps shall have (see Figures 2 and 3): Wastepipes that discharge to the gullytrap arranged to permit easy cleaning of the gullytrap.
+(40.42876528512046, 'if( exist( gully trap)), then( obligation( and( towards( wastepipe, gully trap), is( wastepipe. cleaning, easy))))')
+Target: if( towards( waste pipe, gully trap)), then( obligation( and( for( waste pipe. arrangement, easily cleaned), is( gully trap, easily cleaned))))
+
+Source: G13AS2 Drainage 3.3.1 All gully traps shall have (see Figures 2 and 3): The top of the water seal no more than 600 mm below the top of the gully dish.
+(57.825701954679644, "if( exist( gully trap)), then( obligation( and( has( gully trap, water seal), has( gully trap, gully dish), less than equal( water seal. elevation, 'gully dish. elevation - 600 mm'))))")
+Target: if( exist( gully trap)), then( obligation( and( define( top of( gully trap. gully dish), x0), greater than equal( top of( gully trap. water seal), 'x0 - 600 mm'))))
+
+Source: E2AS1 Metal cappings installed over parapets and enclosed balustrades. i) Where both ends of a capping are constrained, allowance shall be made for expansion.
+(70.23088617807946, 'if( and( is( capping. material, metal), has( capping, end), loop( for each( capping. end), is( capping. end, constrained)))), then( obligation( has( capping, expansion allowance)))')
+Target: if( and( is( capping. material, metal), above( capping. installation, and( parapet, balustrade)), is( balustrade, enclosed), loop( for each( capping. end), is( capping. end, constrained)))), then( obligation( has( capping, expansion allowance)))
+
+Source: CAS2 2.2.1 Fire safety system types, as defined in Table 2.2, shall be provided throughout firecells and be as specified in: Table 2.2d for risk group VP.
+(100.0, 'if( is( firecell. risk group, vp)), then( obligation( as per( firecell. fire safety system, nzbc cas2 t2.2.d)))')
+Target: if( is( firecell. risk group, vp)), then( obligation( as per( firecell. fire safety system, nzbc cas2 t2.2.d)))
+
+Source: E2AS1 The maximum moisture contents shall be: For reconstituted wood products, 18% at all times.
+(78.12312949601142, 'if( is( product. material, reconstituted wood)), then( obligation( less than equal( product. moisture content, 18 percent)))')
+Target: if( and( is( product. material, wood), is( wood. type, reconstituted))), then( obligation( less than equal( product. moisture content, 18 percent)))
+
+Source: E2AS1 10.3 Measuring moisture content 10.3.1 Timber; Measurement shall be by the recommended procedure in the Scion (New Zealand Forest Research Institute) publication 'Measurement of moisture content of Wood' using electrical resistance type moisture meters with insulated probes. Representative samplings of measurements shall be taken: a) With meters calibrated to AS/NZS 1080.1 Appendix E b) By inserting probes to at least 1/3 the depth of timber being measured, at a distance exceeding 200 mm from board ends c) Using correction factors for timber species, temperature, and treatment type (outlined in Scion publication above).
+(39.56362097866867, "if( is( material, timber)), then( obligation( and( has( material, moisture content), as per( moisture content. measurement, scion publication), by( moisture content. measurement, electrical resistance type moisture meter), is( moisture meter. probe, insulated), greater than equal( moisture meter. probe depth, '1/3 * timber depth'), greater than( moisture meter. probe distance, 200 mm), comply with( moisture meter. calibration, as/nzs 1080.1 appendix e), apply correction factors( moisture content. measurement, timber species, temperature, treatment type))))")
+Target: if( and( by( timber. moisture content, measurement))), then( obligation( and( is( measurement. recommended procedure, measurement of moisture content of wood), as per( measurement. recommended procedure, scion publication), by( measurement, moisture meter), is( moisture meter. type, electrical resistance), has( moisture meter, insulated probe), as per( moisture meter. calibration, nzs 1080 1 appendix e), by( measurement. sampling, probe), into( probe, timber), define( timber. depth, x0), greater than equal( probe. depth, '1/3 * x0'), has( timber, board), define( board. end, x1), greater than( probe. location, 'x1 + 200 mm'), include( measurement. correction factor, and( timber species, temperature, treatment type)), as per( measurement. correction factor, scion publication))))

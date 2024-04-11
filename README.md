@@ -90,6 +90,7 @@ The supplementary material for "Improving Semantic Parsing through Additional Tr
 - data/lrml_ds_v8_add_data_150.csv: The additional training data added to lrml_ds_v8_sel.
 - data/lrml_ds_v8_gen_data.csv: The recreated dataset lrml_ds_v8_sel using GPT-4.
 - data/lrml_ds_v8_sel.csv: The V8 LRML dataset with columns including the manual selection of the exemplar rules.
+- data/example_predictions.csv: Predicted test samples analysed and used as examples.
 - eppm_experiment.ipynb: The main experiment file for the GPT-4 experiments.
 - eppm_data_train.py: Training T5 with GPT4 as teacher model.
 - egice_training.py/lrml_score.py/training_utils.py: The utility files for the training and evaluation of the T5 model as in Chapter 7.
